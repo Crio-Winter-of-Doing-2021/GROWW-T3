@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "root",
+        "children": ["logged_in"],
+        "isLeafNode": false,
+        "evalCondition": "User.loggedIn",
+        "questions": []
+    },
+    {
+        "_id": "logged_in",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": [1, 2, 3]
+    },
+    {
+        "_id": "logged_out",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": [4, 5, 6]
+    }
+]
