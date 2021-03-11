@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import TabNav from '../../components/TabNav/TabNav'
 import Tab from '../../components/Tab/Tab'
 import * as TabNames from '../../utils/Tabs'
+import Stocks from '../stocks/Stocks'
 
 const Main = () => {
 
@@ -10,7 +11,7 @@ const Main = () => {
 		<div>
 			<TabNav tabs={[TabNames.STOCKS, TabNames.MUTUAL_FUNDS, TabNames.GOLD, TabNames.FDS, TabNames.ORDERS]} selected={selected} setSelected={ setSelected }>
           <Tab isSelected={ selected === TabNames.STOCKS }>
-            <p>Stocks</p>
+            <Stocks />
           </Tab>
           <Tab isSelected={ selected === TabNames.MUTUAL_FUNDS }>
             <p>Mutual funds</p>

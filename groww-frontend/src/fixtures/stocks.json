@@ -1,0 +1,1197 @@
+{
+	"exploreCompanies": {
+			"TOP_LOSERS": [
+					{
+							"company": {
+									"isin": "INE028A01039",
+									"companyName": "Bank Of Baroda",
+									"searchId": "bank-of-baroda",
+									"nseScriptCode": "BANKBARODA",
+									"companyShortName": "Bank Of Baroda",
+									"bseScriptCode": "532134",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE028A01039.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "BANKBARODA",
+									"tsInMillis": 1614940199,
+									"open": 85.2,
+									"high": 85.8,
+									"low": 79.5,
+									"close": 85.8,
+									"ltp": 80.65,
+									"dayChange": -5.1499999999999915,
+									"dayChangePerc": -6.002331002330993,
+									"lowPriceRange": 72.6,
+									"highPriceRange": 88.7,
+									"volume": 100394468,
+									"marketCap": 3.931394330514e11,
+									"totalBuyQty": 77677.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE095A01012",
+									"companyName": "IndusInd Bank",
+									"searchId": "indusind-bank-ltd",
+									"nseScriptCode": "INDUSINDBK",
+									"companyShortName": "Indusind Bank",
+									"bseScriptCode": "532187",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE095A01012.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "INDUSINDBK",
+									"tsInMillis": 1614940199,
+									"open": 1084.0,
+									"high": 1084.0,
+									"low": 1025.45,
+									"close": 1091.95,
+									"ltp": 1039.9,
+									"dayChange": -52.049999999999955,
+									"dayChangePerc": -4.766701772059156,
+									"lowPriceRange": 935.95,
+									"highPriceRange": 1143.85,
+									"volume": 13926140,
+									"marketCap": 1.0025540499184e12,
+									"totalBuyQty": 6223.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE176B01034",
+									"companyName": "Havells India",
+									"searchId": "havells-india-ltd",
+									"nseScriptCode": "HAVELLS",
+									"companyShortName": "Havells India",
+									"bseScriptCode": "517354",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE176B01034.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HAVELLS",
+									"tsInMillis": 1614940082,
+									"open": 1140.0,
+									"high": 1163.0,
+									"low": 1110.0,
+									"close": 1171.6,
+									"ltp": 1116.8,
+									"dayChange": -54.799999999999955,
+									"dayChangePerc": -4.67736428815295,
+									"lowPriceRange": 1005.15,
+									"highPriceRange": 1228.45,
+									"volume": 4524090,
+									"marketCap": 3.996376897924e11,
+									"totalBuyQty": 349.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE267A01025",
+									"companyName": "Hindustan Zinc",
+									"searchId": "hindustan-zinc-ltd",
+									"nseScriptCode": "HINDZINC",
+									"companyShortName": "Hindustan Zinc",
+									"bseScriptCode": "500188",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE267A01025.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HINDZINC",
+									"tsInMillis": 1614940180,
+									"open": 322.05,
+									"high": 322.75,
+									"low": 310.0,
+									"close": 325.9,
+									"ltp": 311.45,
+									"dayChange": -14.449999999999989,
+									"dayChangePerc": -4.433875421908557,
+									"lowPriceRange": 249.2,
+									"highPriceRange": 373.7,
+									"volume": 1237997,
+									"marketCap": 8.9809155345e11,
+									"totalBuyQty": 5224.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE160A01022",
+									"companyName": "Punjab National Bank",
+									"searchId": "punjab-national-bank",
+									"nseScriptCode": "PNB",
+									"companyShortName": "PNB",
+									"bseScriptCode": "532461",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE160A01022.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "PNB",
+									"tsInMillis": 1614940170,
+									"open": 43.6,
+									"high": 43.6,
+									"low": 41.3,
+									"close": 43.6,
+									"ltp": 41.7,
+									"dayChange": -1.8999999999999986,
+									"dayChangePerc": -4.357798165137612,
+									"lowPriceRange": 37.55,
+									"highPriceRange": 45.85,
+									"volume": 129772294,
+									"marketCap": 4.288460751362e11,
+									"totalBuyQty": 205837.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE155A01022",
+									"companyName": "Tata Motors",
+									"searchId": "tata-motors-ltd",
+									"nseScriptCode": "TATAMOTORS",
+									"companyShortName": "Tata Motors",
+									"bseScriptCode": "500570",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE155A01022.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "TATAMOTORS",
+									"tsInMillis": 1614940199,
+									"open": 333.0,
+									"high": 337.85,
+									"low": 319.7,
+									"close": 339.2,
+									"ltp": 325.15,
+									"dayChange": -14.050000000000011,
+									"dayChangePerc": -4.142099056603777,
+									"lowPriceRange": 292.65,
+									"highPriceRange": 357.65,
+									"volume": 86738909,
+									"marketCap": 4.686166930362e11,
+									"totalBuyQty": 54371.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE075A01022",
+									"companyName": "Wipro",
+									"searchId": "wipro-ltd",
+									"nseScriptCode": "WIPRO",
+									"companyShortName": "Wipro",
+									"bseScriptCode": "507685",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE075A01022.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "WIPRO",
+									"tsInMillis": 1614940198,
+									"open": 440.0,
+									"high": 440.0,
+									"low": 417.0,
+									"close": 438.8,
+									"ltp": 420.85,
+									"dayChange": -17.94999999999999,
+									"dayChangePerc": -4.090701914311757,
+									"lowPriceRange": 378.8,
+									"highPriceRange": 462.9,
+									"volume": 43931172,
+									"marketCap": 1.3888144989862e12,
+									"totalBuyQty": 6614.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE111A01025",
+									"companyName": "Container Corporation Of India",
+									"searchId": "container-corporation-of-india-ltd",
+									"nseScriptCode": "CONCOR",
+									"companyShortName": "Container Corp",
+									"bseScriptCode": "531344",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE111A01025.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "CONCOR",
+									"tsInMillis": 1614940167,
+									"open": 621.7,
+									"high": 624.45,
+									"low": 588.05,
+									"close": 615.55,
+									"ltp": 591.4,
+									"dayChange": -24.149999999999977,
+									"dayChangePerc": -3.9233206075867075,
+									"lowPriceRange": 532.3,
+									"highPriceRange": 650.5,
+									"volume": 4647321,
+									"marketCap": 3.398643873144e11,
+									"totalBuyQty": 2557.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE121J01017",
+									"companyName": "Indus Towers",
+									"searchId": "bharti-infratel-ltd",
+									"nseScriptCode": "INDUSTOWER",
+									"companyShortName": "Indus Towers",
+									"bseScriptCode": "534816",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE121J01017.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "INDUSTOWER",
+									"tsInMillis": 1614940174,
+									"open": 258.1,
+									"high": 258.75,
+									"low": 245.0,
+									"close": 259.15,
+									"ltp": 249.05,
+									"dayChange": -10.099999999999966,
+									"dayChangePerc": -3.897356743198907,
+									"lowPriceRange": 224.15,
+									"highPriceRange": 273.95,
+									"volume": 4973536,
+									"marketCap": 4.290166326597e11,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 1573.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE628A01036",
+									"companyName": "UPL",
+									"searchId": "upl-ltd",
+									"nseScriptCode": "UPL",
+									"companyShortName": "UPL",
+									"bseScriptCode": "512070",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE628A01036.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "UPL",
+									"tsInMillis": 1614940080,
+									"open": 615.45,
+									"high": 615.9,
+									"low": 586.0,
+									"close": 615.45,
+									"ltp": 591.55,
+									"dayChange": -23.90000000000009,
+									"dayChangePerc": -3.8833373954017527,
+									"lowPriceRange": 532.4,
+									"highPriceRange": 650.7,
+									"volume": 7517590,
+									"marketCap": 4.075225531524e11,
+									"totalBuyQty": 1599.0,
+									"totalSellQty": 0.0
+							}
+					}
+			],
+			"TOP_GAINERS": [
+					{
+							"company": {
+									"isin": "INE192R01011",
+									"companyName": "Avenue Supermarts",
+									"searchId": "avenue-supermarts-ltd",
+									"nseScriptCode": "DMART",
+									"companyShortName": "Avenue Supermarts",
+									"bseScriptCode": "540376",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE192R01011.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "DMART",
+									"tsInMillis": 1614940197,
+									"open": 3130.0,
+									"high": 3330.0,
+									"low": 3120.0,
+									"close": 3178.7,
+									"ltp": 3286.1,
+									"dayChange": 107.40000000000009,
+									"dayChangePerc": 3.3787397363702176,
+									"lowPriceRange": 2628.9,
+									"highPriceRange": 3943.3,
+									"volume": 1535808,
+									"marketCap": 1.149849180032e12,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 76.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE213A01029",
+									"companyName": "Oil & Natural Gas Corporation",
+									"searchId": "oil-natural-gas-corporation-ltd",
+									"nseScriptCode": "ONGC",
+									"companyShortName": "ONGC",
+									"bseScriptCode": "500312",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE213A01029.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ONGC",
+									"tsInMillis": 1614940190,
+									"open": 116.25,
+									"high": 118.25,
+									"low": 113.5,
+									"close": 112.7,
+									"ltp": 114.95,
+									"dayChange": 2.25,
+									"dayChangePerc": 1.9964507542147292,
+									"lowPriceRange": 103.5,
+									"highPriceRange": 126.4,
+									"volume": 57756103,
+									"marketCap": 1.6832413577628e12,
+									"totalBuyQty": 11907.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE129A01019",
+									"companyName": "GAIL (India)",
+									"searchId": "gail-india-ltd",
+									"nseScriptCode": "GAIL",
+									"companyShortName": "GAIL India",
+									"bseScriptCode": "532155",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE129A01019.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "GAIL",
+									"tsInMillis": 1614940162,
+									"open": 144.35,
+									"high": 150.0,
+									"low": 144.35,
+									"close": 144.45,
+									"ltp": 147.15,
+									"dayChange": 2.700000000000017,
+									"dayChangePerc": 1.8691588785046849,
+									"lowPriceRange": 132.45,
+									"highPriceRange": 161.85,
+									"volume": 34317341,
+									"marketCap": 5.518158573051e11,
+									"totalBuyQty": 613743.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE765G01017",
+									"companyName": "ICICI Lombard General Insurance Co",
+									"searchId": "icici-lombard-general-insurance-co-ltd",
+									"nseScriptCode": "ICICIGI",
+									"companyShortName": "ICICI Lombard Gen.",
+									"bseScriptCode": "540716",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE765G01017.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ICICIGI",
+									"tsInMillis": 1614940082,
+									"open": 1466.0,
+									"high": 1501.65,
+									"low": 1455.55,
+									"close": 1471.3,
+									"ltp": 1495.55,
+									"dayChange": 24.25,
+									"dayChangePerc": 1.6482022701012708,
+									"lowPriceRange": 1346.0,
+									"highPriceRange": 1645.1,
+									"volume": 741576,
+									"marketCap": 6.166168458606001e11,
+									"totalBuyQty": 173.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE585B01010",
+									"companyName": "Maruti Suzuki India",
+									"searchId": "maruti-suzuki-india-ltd",
+									"nseScriptCode": "MARUTI",
+									"companyShortName": "Maruti Suzuki",
+									"bseScriptCode": "532500",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE585B01010.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "MARUTI",
+									"tsInMillis": 1614940188,
+									"open": 7130.0,
+									"high": 7315.0,
+									"low": 7070.0,
+									"close": 7131.6,
+									"ltp": 7249.0,
+									"dayChange": 117.39999999999964,
+									"dayChangePerc": 1.6461944023781427,
+									"lowPriceRange": 6524.1,
+									"highPriceRange": 7973.9,
+									"volume": 1821165,
+									"marketCap": 2.131960231456e12,
+									"totalBuyQty": 199.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE237A01028",
+									"companyName": "Kotak Mahindra Bank",
+									"searchId": "kotak-mahindra-bank-ltd",
+									"nseScriptCode": "KOTAKBANK",
+									"companyShortName": "Kotak Mahindra Bank",
+									"bseScriptCode": "500247",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE237A01028.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "KOTAKBANK",
+									"tsInMillis": 1614940193,
+									"open": 1875.5,
+									"high": 1928.3,
+									"low": 1868.0,
+									"close": 1897.7,
+									"ltp": 1922.5,
+									"dayChange": 24.799999999999955,
+									"dayChangePerc": 1.3068451283132188,
+									"lowPriceRange": 1730.25,
+									"highPriceRange": 2114.75,
+									"volume": 5407986,
+									"marketCap": 2.9965173649455e12,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 244.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE158A01026",
+									"companyName": "Hero MotoCorp",
+									"searchId": "hero-motocorp-ltd",
+									"nseScriptCode": "HEROMOTOCO",
+									"companyShortName": "Hero MotoCorp",
+									"bseScriptCode": "500182",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE158A01026.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HEROMOTOCO",
+									"tsInMillis": 1614940138,
+									"open": 3415.0,
+									"high": 3491.5,
+									"low": 3394.0,
+									"close": 3419.85,
+									"ltp": 3461.7,
+									"dayChange": 41.84999999999991,
+									"dayChangePerc": 1.2237378832404904,
+									"lowPriceRange": 3115.55,
+									"highPriceRange": 3807.85,
+									"volume": 1017875,
+									"marketCap": 4.873888213057e11,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 98.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE259A01022",
+									"companyName": "Colgate-Palmolive (India)",
+									"searchId": "colgatepalmolive-india-ltd",
+									"nseScriptCode": "COLPAL",
+									"companyShortName": "Colgate Palmol. (I)",
+									"bseScriptCode": "500830",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE259A01022.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "COLPAL",
+									"tsInMillis": 1614940082,
+									"open": 1626.4,
+									"high": 1649.75,
+									"low": 1616.65,
+									"close": 1620.2,
+									"ltp": 1633.9,
+									"dayChange": 13.700000000000045,
+									"dayChangePerc": 0.8455746204172353,
+									"lowPriceRange": 1470.55,
+									"highPriceRange": 1797.25,
+									"volume": 980777,
+									"marketCap": 4.091207906628e11,
+									"totalBuyQty": 124.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE239A01016",
+									"companyName": "Nestle India",
+									"searchId": "nestle-india-ltd",
+									"nseScriptCode": "NESTLEIND",
+									"companyShortName": "Nestle",
+									"bseScriptCode": "500790",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE239A01016.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "NESTLEIND",
+									"tsInMillis": 1614940082,
+									"open": 16516.0,
+									"high": 16840.0,
+									"low": 16456.0,
+									"close": 16661.8,
+									"ltp": 16782.9,
+									"dayChange": 121.10000000000218,
+									"dayChangePerc": 0.726812229170931,
+									"lowPriceRange": 15104.65,
+									"highPriceRange": 18461.15,
+									"volume": 102741,
+									"marketCap": 1.3662733659354e12,
+									"totalBuyQty": 2.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE481G01011",
+									"companyName": "Ultratech Cement",
+									"searchId": "ultratech-cement-ltd",
+									"nseScriptCode": "ULTRACEMCO",
+									"companyShortName": "Ultratech Cement",
+									"bseScriptCode": "532538",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE481G01011.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ULTRACEMCO",
+									"tsInMillis": 1614940188,
+									"open": 6690.5,
+									"high": 6944.2,
+									"low": 6690.5,
+									"close": 6775.55,
+									"ltp": 6810.3,
+									"dayChange": 34.75,
+									"dayChangePerc": 0.512873493664721,
+									"lowPriceRange": 6129.3,
+									"highPriceRange": 7491.3,
+									"volume": 1828811,
+									"marketCap": 1.1768674112721501e12,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 451.0
+							}
+					}
+			],
+			"STOCKS_IN_NEWS": [
+					{
+							"company": {
+									"isin": "INE694N01015",
+									"companyName": "Heranba Industries",
+									"searchId": "heranba-industries-ltd",
+									"nseScriptCode": "HERANBA",
+									"companyShortName": "Heranba Industries",
+									"bseScriptCode": "543266",
+									"bseScriptGroup": "B"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HERANBA",
+									"tsInMillis": 1614940191,
+									"low": 796.55,
+									"close": 627.0,
+									"ltp": 812.6,
+									"dayChange": 185.60000000000002,
+									"dayChangePerc": 29.601275917065394,
+									"lowPriceRange": 650.1,
+									"highPriceRange": 975.1,
+									"volume": 16523452,
+									"totalBuyQty": 48571.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE075A01022",
+									"companyName": "Wipro",
+									"searchId": "wipro-ltd",
+									"nseScriptCode": "WIPRO",
+									"companyShortName": "Wipro",
+									"bseScriptCode": "507685",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE075A01022.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "WIPRO",
+									"tsInMillis": 1614940198,
+									"open": 440.0,
+									"high": 440.0,
+									"low": 417.0,
+									"close": 438.8,
+									"ltp": 420.85,
+									"dayChange": -17.94999999999999,
+									"dayChangePerc": -4.090701914311757,
+									"lowPriceRange": 378.8,
+									"highPriceRange": 462.9,
+									"volume": 43931172,
+									"totalBuyQty": 6614.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE669E01016",
+									"companyName": "Vodafone Idea",
+									"searchId": "vodafone-idea-ltd",
+									"nseScriptCode": "IDEA",
+									"companyShortName": "Vodafone Idea",
+									"bseScriptCode": "532822",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE669E01016.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "IDEA",
+									"tsInMillis": 1614940199,
+									"open": 10.9,
+									"high": 11.0,
+									"low": 10.4,
+									"close": 11.0,
+									"ltp": 10.55,
+									"dayChange": -0.4499999999999993,
+									"dayChangePerc": -4.090909090909085,
+									"lowPriceRange": 9.5,
+									"highPriceRange": 11.6,
+									"volume": 294392507,
+									"totalBuyQty": 1141124.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE148I01020",
+									"companyName": "Indiabulls Housing Finance",
+									"searchId": "indiabulls-housing-finance-ltd",
+									"nseScriptCode": "IBULHSGFIN",
+									"companyShortName": "Indiabulls Housing",
+									"bseScriptCode": "535789",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE148I01020.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "IBULHSGFIN",
+									"tsInMillis": 1614940197,
+									"open": 243.0,
+									"high": 243.85,
+									"low": 227.1,
+									"close": 243.45,
+									"ltp": 231.6,
+									"dayChange": -11.849999999999994,
+									"dayChangePerc": -4.8675292667898935,
+									"lowPriceRange": 208.45,
+									"highPriceRange": 254.75,
+									"volume": 21577834,
+									"totalBuyQty": 32050.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE0FDU25010",
+									"companyName": "Brookfield India Real Estate Trust REIT",
+									"searchId": "brookfield-india-real-estate-trust-reit",
+									"nseScriptCode": "BIRET",
+									"companyShortName": "Brookfield IndiaReal",
+									"bseScriptCode": "543261",
+									"bseScriptGroup": "IF"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "BIRET",
+									"tsInMillis": 1614939583,
+									"open": 248.01,
+									"high": 249.5,
+									"low": 245.55,
+									"close": 275.0,
+									"ltp": 246.59,
+									"dayChange": -28.409999999999997,
+									"dayChangePerc": -10.330909090909088,
+									"lowPriceRange": 198.32,
+									"highPriceRange": 297.48,
+									"volume": 150800,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 600.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE0DD101019",
+									"companyName": "Railtel Corporation Of India",
+									"searchId": "railtel-corporation-of-india-ltd",
+									"nseScriptCode": "RAILTEL",
+									"companyShortName": "Railtel Corporation Of India",
+									"bseScriptCode": "543265",
+									"bseScriptGroup": "B"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "RAILTEL",
+									"tsInMillis": 1614940171,
+									"open": 165.6,
+									"high": 170.0,
+									"low": 156.35,
+									"close": 162.45,
+									"ltp": 159.0,
+									"dayChange": -3.4499999999999886,
+									"dayChangePerc": -2.123730378578017,
+									"lowPriceRange": 143.1,
+									"highPriceRange": 174.9,
+									"volume": 7533649,
+									"totalBuyQty": 11737.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE009A01021",
+									"companyName": "Infosys",
+									"searchId": "infosys-ltd",
+									"nseScriptCode": "INFY",
+									"companyShortName": "Infosys",
+									"bseScriptCode": "500209",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE009A01021.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "INFY",
+									"tsInMillis": 1614940162,
+									"open": 1328.5,
+									"high": 1340.0,
+									"low": 1305.05,
+									"close": 1330.35,
+									"ltp": 1316.7,
+									"dayChange": -13.649999999999864,
+									"dayChangePerc": -1.0260457774269827,
+									"lowPriceRange": 1185.05,
+									"highPriceRange": 1448.35,
+									"volume": 6486176,
+									"totalBuyQty": 4246.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE742F01042",
+									"companyName": "Adani Ports and Special Economic Zone",
+									"searchId": "adani-ports-and-special-economic-zone-ltd",
+									"nseScriptCode": "ADANIPORTS",
+									"companyShortName": "Adani Ports &Special",
+									"bseScriptCode": "532921",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE742F01042.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ADANIPORTS",
+									"tsInMillis": 1614940199,
+									"open": 752.45,
+									"high": 761.0,
+									"low": 730.5,
+									"close": 752.45,
+									"ltp": 748.95,
+									"dayChange": -3.5,
+									"dayChangePerc": -0.4651471858595256,
+									"lowPriceRange": 674.1,
+									"highPriceRange": 823.8,
+									"volume": 17665200,
+									"totalBuyQty": 6585.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE962Y01021",
+									"companyName": "Ircon International",
+									"searchId": "ircon-international-ltd",
+									"nseScriptCode": "IRCON",
+									"companyShortName": "Ircon International",
+									"bseScriptCode": "541956",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE962Y01013.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "IRCON",
+									"tsInMillis": 1614940179,
+									"open": 90.45,
+									"high": 92.75,
+									"low": 90.0,
+									"close": 91.2,
+									"ltp": 90.3,
+									"dayChange": -0.9000000000000057,
+									"dayChangePerc": -0.9868421052631641,
+									"lowPriceRange": 72.25,
+									"highPriceRange": 108.35,
+									"volume": 17430303,
+									"totalBuyQty": 7773.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE249Z01012",
+									"companyName": "Mazagon Dock Shipbuilders",
+									"searchId": "mazagon-dock-shipbuilders-ltd",
+									"nseScriptCode": "MAZDOCK",
+									"companyShortName": "Mazagon Dock Ship",
+									"bseScriptCode": "543237",
+									"bseScriptGroup": "B"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "MAZDOCK",
+									"tsInMillis": 1614940116,
+									"open": 232.6,
+									"high": 234.9,
+									"low": 220.5,
+									"close": 233.05,
+									"ltp": 221.8,
+									"dayChange": -11.25,
+									"dayChangePerc": -4.827290281055567,
+									"lowPriceRange": 177.45,
+									"highPriceRange": 266.15,
+									"volume": 1261469,
+									"totalBuyQty": 10795.0,
+									"totalSellQty": 0.0
+							}
+					}
+			],
+			"MOST_VALUABLE": [
+					{
+							"company": {
+									"isin": "INE002A01018",
+									"companyName": "Reliance Industries",
+									"searchId": "reliance-industries-ltd",
+									"nseScriptCode": "RELIANCE",
+									"companyShortName": "Reliance Industries",
+									"bseScriptCode": "500325",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE002A01018.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "RELIANCE",
+									"tsInMillis": 1614940186,
+									"open": 2156.0,
+									"high": 2211.95,
+									"low": 2153.05,
+									"close": 2175.85,
+									"ltp": 2178.7,
+									"dayChange": 2.849999999999909,
+									"dayChangePerc": 0.13098329388514415,
+									"lowPriceRange": 1960.85,
+									"highPriceRange": 2396.55,
+									"volume": 11773630,
+									"marketCap": 9.802875412651201e12,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 1255.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE467B01029",
+									"companyName": "Tata Consultancy Services",
+									"searchId": "tata-consultancy-services-ltd",
+									"nseScriptCode": "TCS",
+									"companyShortName": "TCS",
+									"bseScriptCode": "532540",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE467B01029.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "TCS",
+									"tsInMillis": 1614940181,
+									"open": 3016.1,
+									"high": 3063.2,
+									"low": 2996.6,
+									"close": 3049.7,
+									"ltp": 3008.05,
+									"dayChange": -41.649999999999636,
+									"dayChangePerc": -1.3657081024362934,
+									"lowPriceRange": 2707.25,
+									"highPriceRange": 3308.85,
+									"volume": 3203686,
+									"marketCap": 7.769500153008301e12,
+									"totalBuyQty": 2789.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE040A01034",
+									"companyName": "HDFC Bank",
+									"searchId": "hdfc-bank-ltd",
+									"nseScriptCode": "HDFCBANK",
+									"companyShortName": "HDFC Bank",
+									"bseScriptCode": "500180",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE040A01034.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HDFCBANK",
+									"tsInMillis": 1614940155,
+									"open": 1531.0,
+									"high": 1545.6,
+									"low": 1521.1,
+									"close": 1552.05,
+									"ltp": 1530.0,
+									"dayChange": -22.049999999999955,
+									"dayChangePerc": -1.42070165265294,
+									"lowPriceRange": 1377.0,
+									"highPriceRange": 1683.0,
+									"volume": 8722911,
+									"marketCap": 6.9267121026065e12,
+									"totalBuyQty": 6249.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE030A01027",
+									"companyName": "Hindustan Unilever",
+									"searchId": "hindustan-unilever-ltd",
+									"nseScriptCode": "HINDUNILVR",
+									"companyShortName": "Hindustan Unilever",
+									"bseScriptCode": "500696",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE030A01027.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HINDUNILVR",
+									"tsInMillis": 1614940082,
+									"open": 2184.6,
+									"high": 2209.95,
+									"low": 2175.25,
+									"close": 2196.9,
+									"ltp": 2201.1,
+									"dayChange": 4.199999999999818,
+									"dayChangePerc": 0.19117847876552496,
+									"lowPriceRange": 1981.0,
+									"highPriceRange": 2421.2,
+									"volume": 2129837,
+									"marketCap": 4.3820125657794e12,
+									"totalBuyQty": 845.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE001A01036",
+									"companyName": "Housing Development Finance Corporation",
+									"searchId": "housing-development-finance-corporation-ltd",
+									"nseScriptCode": "HDFC",
+									"companyShortName": "HDFC",
+									"bseScriptCode": "500010",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE001A01036.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "HDFC",
+									"tsInMillis": 1614940113,
+									"open": 2573.6,
+									"high": 2579.9,
+									"low": 2523.5,
+									"close": 2582.95,
+									"ltp": 2543.9,
+									"dayChange": -39.04999999999973,
+									"dayChangePerc": -1.511837240364689,
+									"lowPriceRange": 2289.55,
+									"highPriceRange": 2798.25,
+									"volume": 4254126,
+									"marketCap": 3.8629949697544497e12,
+									"totalBuyQty": 100.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE090A01021",
+									"companyName": "ICICI Bank",
+									"searchId": "icici-bank-ltd",
+									"nseScriptCode": "ICICIBANK",
+									"companyShortName": "ICICI Bank",
+									"bseScriptCode": "532174",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE090A01021.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ICICIBANK",
+									"tsInMillis": 1614940194,
+									"open": 613.2,
+									"high": 614.7,
+									"low": 601.5,
+									"close": 620.75,
+									"ltp": 609.45,
+									"dayChange": -11.299999999999955,
+									"dayChangePerc": -1.8203785743052685,
+									"lowPriceRange": 548.55,
+									"highPriceRange": 670.35,
+									"volume": 26645968,
+									"marketCap": 3.2113967131535e12,
+									"totalBuyQty": 18851.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE154A01025",
+									"companyName": "ITC",
+									"searchId": "itc-ltd",
+									"nseScriptCode": "ITC",
+									"companyShortName": "ITC",
+									"bseScriptCode": "500875",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE154A01025.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "ITC",
+									"tsInMillis": 1614940197,
+									"open": 208.0,
+									"high": 210.0,
+									"low": 207.2,
+									"close": 209.7,
+									"ltp": 208.55,
+									"dayChange": -1.1499999999999773,
+									"dayChangePerc": -0.5484024797329411,
+									"lowPriceRange": 187.7,
+									"highPriceRange": 229.4,
+									"volume": 17323590,
+									"marketCap": 3.04308206805915e12,
+									"totalBuyQty": 212681.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE237A01028",
+									"companyName": "Kotak Mahindra Bank",
+									"searchId": "kotak-mahindra-bank-ltd",
+									"nseScriptCode": "KOTAKBANK",
+									"companyShortName": "Kotak Mahindra Bank",
+									"bseScriptCode": "500247",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE237A01028.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "KOTAKBANK",
+									"tsInMillis": 1614940193,
+									"open": 1875.5,
+									"high": 1928.3,
+									"low": 1868.0,
+									"close": 1897.7,
+									"ltp": 1922.5,
+									"dayChange": 24.799999999999955,
+									"dayChangePerc": 1.3068451283132188,
+									"lowPriceRange": 1730.25,
+									"highPriceRange": 2114.75,
+									"volume": 5407986,
+									"marketCap": 2.9965173649455e12,
+									"totalBuyQty": 0.0,
+									"totalSellQty": 244.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE009A01021",
+									"companyName": "Infosys",
+									"searchId": "infosys-ltd",
+									"nseScriptCode": "INFY",
+									"companyShortName": "Infosys",
+									"bseScriptCode": "500209",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE009A01021.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "INFY",
+									"tsInMillis": 1614940162,
+									"open": 1328.5,
+									"high": 1340.0,
+									"low": 1305.05,
+									"close": 1330.35,
+									"ltp": 1316.7,
+									"dayChange": -13.649999999999864,
+									"dayChangePerc": -1.0260457774269827,
+									"lowPriceRange": 1185.05,
+									"highPriceRange": 1448.35,
+									"volume": 6486176,
+									"marketCap": 2.9517492463556997e12,
+									"totalBuyQty": 4246.0,
+									"totalSellQty": 0.0
+							}
+					},
+					{
+							"company": {
+									"isin": "INE062A01020",
+									"companyName": "State Bank Of India",
+									"searchId": "state-bank-of-india",
+									"nseScriptCode": "SBIN",
+									"companyShortName": "SBI",
+									"bseScriptCode": "500112",
+									"bseScriptGroup": "A",
+									"imageUrl": "https://assets-netstorage.groww.in/stock-assets/logos/INE062A01020.png"
+							},
+							"stats": {
+									"type": "LIVE_PRICE",
+									"symbol": "SBIN",
+									"tsInMillis": 1614940194,
+									"open": 395.0,
+									"high": 395.0,
+									"low": 378.1,
+									"close": 395.65,
+									"ltp": 383.65,
+									"dayChange": -12.0,
+									"dayChangePerc": -3.032983697712625,
+									"lowPriceRange": 345.3,
+									"highPriceRange": 422.0,
+									"volume": 72179228,
+									"marketCap": 2.9375358864160996e12,
+									"totalBuyQty": 43632.0,
+									"totalSellQty": 0.0
+							}
+					}
+			]
+	},
+	"count": 100
+}
