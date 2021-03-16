@@ -1,36 +1,56 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Bot Backend Continuous Deployment
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    # Triggers the workflow on push or pull request events but only for the main branch
+    push:
+        branches: [main]
+        paths:
+            - "bot-backend/**"
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+defaults:
+    run:
+        working-directory: bot-backend
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    # This workflow contains a single job called "build"
+    build:
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+            - name: Remove .gitignore
+              run: |
+                  rm .gitignore
+                  ls -a
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+            - name: Pull config.js
+              run: |
+                  git clone https://gist.github.com/{{ secrets.BB_CONFIG_UID }}.git
+                  mv ${{ secrets.BB_CONFIG_UID }}/config.js .
+                  rm -rf ${{ secrets.BB_CONFIG_UID }}
+                  ls -a
+
+            - name: Commit changes
+              run: |
+                  git init
+                  git config --global user.name "naman-gupta99"
+                  git config --global user.email "kungfunaman@gmail.com"
+                  git add .
+                  git commit -m "Add Config file"
+
+            - uses: akhileshns/heroku-deploy@v3.3.6 # This is the action
+              with:
+                  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+                  heroku_app_name: "groww-chatbot-backend"
+                  heroku_email: "kungfunaman@gmail.com"
