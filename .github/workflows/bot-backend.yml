@@ -13,10 +13,6 @@ on:
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
-defaults:
-    run:
-        working-directory: bot-backend
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     # This workflow contains a single job called "build"
@@ -33,6 +29,7 @@ jobs:
               run: |
                   rm .gitignore
                   ls -a
+              working-directory: bot-backend
 
             - name: Pull config.js
               run: |
@@ -40,6 +37,7 @@ jobs:
                   mv ${{ secrets.BB_CONFIG_UID }}/config.js .
                   rm -rf ${{ secrets.BB_CONFIG_UID }}
                   ls -a
+              working-directory: bot-backend
 
             - name: Commit changes
               run: |
@@ -48,6 +46,7 @@ jobs:
                   git config --global user.email "kungfunaman@gmail.com"
                   git add .
                   git commit -m "Add Config file"
+              working-directory: bot-backend
 
             - uses: onekiloparsec/heroku-node-deploy-subfolder@v1.0.4
               with:
@@ -55,4 +54,4 @@ jobs:
                   app_name: "groww-chatbot-backend"
                   email: "kungfunaman@gmail.com"
                   branch: "main"
-                  subfolder: "."
+                  subfolder: "bot-backend"
