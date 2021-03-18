@@ -54,4 +54,4 @@ jobs:
                   app_name: "groww-bot-backend"
                   email: "kungfunaman@gmail.com"
                   heroku_branch: "master"
-                  subfolder: "groww-backend"
+                  subfolder: "."
