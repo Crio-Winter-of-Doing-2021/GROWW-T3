@@ -54,5 +54,5 @@ jobs:
                   api_key: ${{secrets.HEROKU_API_KEY}}
                   app_name: "groww-chatbot-backend"
                   email: "kungfunaman@gmail.com"
-                  branch: "master"
+                  branch: "main"
                   subfolder: "."
