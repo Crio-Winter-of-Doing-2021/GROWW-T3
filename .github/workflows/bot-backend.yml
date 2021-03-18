@@ -36,7 +36,7 @@ jobs:
 
             - name: Pull config.js
               run: |
-                  git clone https://gist.github.com/{{ secrets.BB_CONFIG_UID }}.git
+                  git clone https://gist.github.com/${{ secrets.BB_CONFIG_UID }}.git
                   mv ${{ secrets.BB_CONFIG_UID }}/config.js .
                   rm -rf ${{ secrets.BB_CONFIG_UID }}
                   ls -a
