@@ -49,8 +49,10 @@ jobs:
                   git add .
                   git commit -m "Add Config file"
 
-            - uses: akhileshns/heroku-deploy@v3.3.6 # This is the action
+            - uses: onekiloparsec/heroku-node-deploy-subfolder@v1.0.4
               with:
-                  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-                  heroku_app_name: "groww-chatbot-backend"
-                  heroku_email: "kungfunaman@gmail.com"
+                  api_key: ${{secrets.HEROKU_API_KEY}}
+                  app_name: "groww-chatbot-backend"
+                  email: "kungfunaman@gmail.com"
+                  heroku_branch: "master"
+                  subfolder: "bot-backend"
