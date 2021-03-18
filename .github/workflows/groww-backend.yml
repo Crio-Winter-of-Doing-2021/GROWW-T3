@@ -43,15 +43,15 @@ jobs:
 
             - name: Commit changes
               run: |
+                  git init
                   git config --global user.name "naman-gupta99"
                   git config --global user.email "kungfunaman@gmail.com"
                   git add .
                   git commit -m "Add Config file"
 
-            - uses: onekiloparsec/heroku-node-deploy-subfolder@v1.0.4
+            - uses: akhileshns/heroku-deploy@v3.12.12
               with:
-                  api_key: ${{secrets.HEROKU_API_KEY}}
-                  app_name: "groww-bot-backend"
-                  email: "kungfunaman@gmail.com"
-                  branch: "main"
-                  subfolder: "."
+                  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+                  heroku_app_name: "groww-bot-backend"
+                  heroku_email: "kungfunaman@gmail.com"
+                  appdir: "groww-backend"
