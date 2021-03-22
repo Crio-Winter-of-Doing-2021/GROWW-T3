@@ -32,7 +32,14 @@ router.get("/:id", (req, res) => {
         .then((user) => {
             if (user == null) res.status(404).json({ error: "User not found" });
             else {
-                res.status(200).json(user);
+                res.status(200).json({
+                    response: "success",
+                    data: {
+                        response: "success",
+                        attributes: null,
+                        user: user,
+                    },
+                });
             }
         })
         .catch((err) =>
