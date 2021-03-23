@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+require("mongoose-function")(mongoose);
 
 const Schema = mongoose.Schema;
 
