@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "root",
+        "children": ["STOCKS", "MUTUAL_FUNDS", "GOLD", "FDS", "ORDERS"],
+        "isLeafNode": false,
+        "evalCondition": "page",
+        "questions": []
+    },
+    {
+        "_id": "STOCKS",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": ["6058da405b10b9049cbaa36b"]
+    },
+    {
+        "_id": "MUTUAL_FUNDS",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": ["6058da405b10b9049cbaa36b"]
+    },
+    {
+        "_id": "GOLD",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": ["6058da405b10b9049cbaa36b"]
+    },
+    {
+        "_id": "FDS",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": ["6058da405b10b9049cbaa36b"]
+    },
+    {
+        "_id": "ORDERS",
+        "children": [],
+        "isLeafNode": true,
+        "evalCondition": "",
+        "questions": ["6058da405b10b9049cbaa36b"]
+    }
+]
