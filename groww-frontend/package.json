@@ -8,8 +8,10 @@
     "@testing-library/user-event": "^12.8.0",
     "bootstrap": "^4.6.0",
     "react": "^17.0.1",
+    "react-chatbot-kit": "^1.1.20",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
+    "react-util-kit": "0.0.14",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
