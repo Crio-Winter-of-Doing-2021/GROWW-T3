@@ -24,6 +24,32 @@ router.post("/", (req, res) => {
         );
 });
 
+// @route   GET v1/question/all
+// @desc    Get All questions
+// @access  Public
+router.get("/all", (req, res) => {
+    ConvNode.find()
+        .then((nodes) => res.status(200).json(nodes))
+        .catch((err) =>
+            res.status(400).json({
+                error: "Some Error Occured : " + err,
+            })
+        );
+});
+
+// @route   GET v1/question/:id
+// @desc    Get question by id
+// @access  Public
+router.get("/:id", (req, res) => [
+    Question.findOne({ _id: req.params.id })
+        .then((question) => res.status(200).json(question))
+        .catch((err) =>
+            res.status(400).json({
+                error: "Some Error Occured : " + err,
+            })
+        ),
+]);
+
 // @route   GET v1/question
 // @desc    Get questions
 // @access  Public
