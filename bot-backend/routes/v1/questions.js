@@ -59,6 +59,19 @@ router.get("/:id", (req, res) => [
         ),
 ]);
 
+// @route   GET v1/question/conv-node/:id
+// @desc    Get conv node by id
+// @access  Public
+router.get("/conv-node/:id", (req, res) => [
+    ConvNode.findOne({ _id: req.params.id })
+        .then((node) => res.status(200).json(node))
+        .catch((err) =>
+            res.status(400).json({
+                error: "Some Error Occured : " + err,
+            })
+        ),
+]);
+
 // @route   GET v1/question
 // @desc    Get questions
 // @access  Public
