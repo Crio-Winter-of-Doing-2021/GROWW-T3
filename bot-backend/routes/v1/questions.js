@@ -10,14 +10,23 @@ const router = express.Router();
 // @desc    Post a new question
 // @access  Public
 router.post("/", (req, res) => {
+    const answer = "return '" + req.body.answer + "'";
+    console.log(answer);
     Question.create({
         question: req.body.question,
-        answer: () => {
-            return req.body.answer;
-        },
+        answer: new Function("page", answer),
     })
         .then((ques) => {
-            res.status(200).json(ques);
+            ConvNode.findOneAndUpdate(
+                { _id: req.body.node_id },
+                { $addToSet: { questions: [ques._id] } }
+            )
+                .then(() => res.status(200).json(ques))
+                .catch((err) =>
+                    res.status(400).json({
+                        error: "Some Error Occured : " + err,
+                    })
+                );
         })
         .catch((err) =>
             res.status(400).json({ error: "Some Error Occured : " + err })
@@ -74,7 +83,7 @@ router.get("/", (req, res) => {
                                 let question = {
                                     _id: ques._id,
                                     question: ques.question,
-                                    answer: ques.answer(),
+                                    answer: ques.answer(page),
                                 };
                                 node.questions.push(question);
                             });
