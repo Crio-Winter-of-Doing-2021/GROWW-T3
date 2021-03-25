@@ -11,9 +11,9 @@ const router = express.Router();
 // @access  Public
 router.post("/", (req, res) => {
     Question.create({
-        question: "How are you?",
+        question: req.body.question,
         answer: () => {
-            return "Good";
+            return req.body.answer;
         },
     })
         .then((ques) => {
