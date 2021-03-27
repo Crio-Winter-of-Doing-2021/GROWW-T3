@@ -7,8 +7,9 @@ import MessageParser from "./MessageParser";
 
 import CurrPageContext from "../../context/CurrPageContext";
 
-const GrowwChatbot = ({ selected }) => {
+const GrowwChatbot = () => {
     const currPage = useContext(CurrPageContext);
+
     class ActionProvider {
         constructor(createChatBotMessage, setStateFunc, createClientMessage) {
             this.createChatBotMessage = createChatBotMessage;
@@ -31,6 +32,13 @@ const GrowwChatbot = ({ selected }) => {
                     messages: [...state.messages, messages],
                 }));
             }
+        };
+
+        handleAnswer = (option) => {
+            const clientMessage = this.createClientMessage(option.name);
+            this.addMessageToBotState(clientMessage);
+            const botMessage = this.createChatBotMessage(option.answer);
+            this.addMessageToBotState(botMessage);
         };
 
         // Default Response

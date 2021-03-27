@@ -22,6 +22,13 @@ class ActionProvider {
         }
     };
 
+    handleAnswer = (option) => {
+        const clientMessage = this.createClientMessage(option.name);
+        this.addMessageToBotState(clientMessage);
+        const botMessage = this.createChatBotMessage(option.answer);
+        this.addMessageToBotState(botMessage);
+    };
+
     // Default Response
     handleDefault = () => {
         const message = this.createChatBotMessage(

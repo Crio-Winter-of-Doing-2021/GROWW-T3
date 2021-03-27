@@ -22,10 +22,9 @@ function App() {
                 <Header />
                 <hr />
                 {isLog ? <Main /> : <Welcome />}
-                <ConditionallyRender
-                    ifTrue={showChatbot}
-                    show={<GrowwChatbot selected={selected} />}
-                />
+                <div style={{ display: showChatbot ? "block" : "none" }}>
+                    <GrowwChatbot />
+                </div>
 
                 <button
                     className="text-center"
