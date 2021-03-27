@@ -17,10 +17,14 @@ const config = {
             widget: "options",
         }),
     ],
+    state: {
+        options: [],
+    },
     widgets: [
         {
             widgetName: "options",
             widgetFunc: (props) => <GeneralOptions {...props} />,
+            mapStateToProps: ["options"],
         },
     ],
 };
