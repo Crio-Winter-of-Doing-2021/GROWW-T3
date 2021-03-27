@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import styles from "./Options.module.css";
+import Options from "../Options/Options";
 import CurrPageContext from "../../../../../context/CurrPageContext";
 
 const GeneralOptions = (props) => {
@@ -22,6 +22,7 @@ const GeneralOptions = (props) => {
                 data.questions.forEach((ques) => {
                     options.push({
                         name: ques.question,
+                        handler: props.actionProvider.handleAnswer,
                         answer: ques.answer,
                         id: i,
                     });
@@ -34,29 +35,6 @@ const GeneralOptions = (props) => {
             });
     }, []);
 
-    const renderOptions = () => {
-        const markup = props.options.map((option) => (
-            <button
-                key={option.id}
-                className={styles.option}
-                onClick={() => {
-                    const clientMessage = props.actionProvider.createClientMessage(
-                        option.name
-                    );
-                    props.actionProvider.addMessageToBotState(clientMessage);
-                    const botMessage = props.actionProvider.createChatBotMessage(
-                        option.answer
-                    );
-                    props.actionProvider.addMessageToBotState(botMessage);
-                }}
-            >
-                {option.name}
-            </button>
-        ));
-
-        return <div className={styles.options}>{markup}</div>;
-    };
-
-    return renderOptions();
+    return <Options options={options} title="Options" {...props} />;
 };
 export default GeneralOptions;
