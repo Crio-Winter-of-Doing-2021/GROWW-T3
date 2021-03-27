@@ -78,6 +78,7 @@ router.get("/conv-node/:id", (req, res) => [
 router.get("/", (req, res) => {
     const start_id = req.query.start_id;
     const page = req.query.page;
+    const logged_in = "LOGGED_IN";
 
     const getLeaf = (id) => {
         ConvNode.findOne({ _id: id })
