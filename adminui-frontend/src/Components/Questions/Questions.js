@@ -18,6 +18,7 @@ class Questions extends Component {
         console.log(questionsdb);
         console.log(this.props.questionArray)
 
+        //Retrieve questions from questionsDatabase for the ids mentioned in questionArray
         for (let i = 0; i < this.props.questionArray.length; i++) {
 
             for (let j = 0; j < questionsdb.length; j++) {

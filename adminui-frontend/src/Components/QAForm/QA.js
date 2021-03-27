@@ -53,6 +53,7 @@ class QA extends Component{
 
         }
 
+        //Fetching all the questions
         for(let i=0; i<this.questionsObjects.length; i++){
 
             const response = await fetch('https://groww-chatbot-backend.herokuapp.com/v1/question/' + this.questionsObjects[i]);
@@ -93,6 +94,9 @@ class QA extends Component{
     }
 
 
+//Used to add a dropdown containing the options as the children of the node with id idOfNode
+    //It adds an object of the format specified in state for every dropdown.
+
     loadCategorySelection(idOfNode, selectedValue, arrayDropDowns, idOfNewDropDown){
 
         let childrenArray = [];
@@ -129,10 +133,12 @@ class QA extends Component{
 
     };
 
+    //Fires when any dropdown is clicked
     handleClick = () => {
 
         //console.log("Hello");
 
+        //Retrieve the chosen values by the user
         let selects = document.getElementsByTagName("select");
 
         let selectedValues = [];
@@ -142,9 +148,17 @@ class QA extends Component{
         }
         //Now, we have all the selected Values
 
+        //Now, we load the dropdowns from the beginning
+        //All the while providing the selected values
+        //that we have stored in the previous step
+        //
+
         let newFormDropDown = [];
 
         newFormDropDown =  this.loadCategorySelection("root",  selectedValues[0],newFormDropDown, 0);
+
+        //For the chosen option, we then add the chosen option's children
+        //In a new dropdown and so on for  all the selected values.
 
         for(let i=0; i<selectedValues.length; i++){
 
@@ -175,6 +189,9 @@ class QA extends Component{
 
         }
 
+        //This new state replaces the old state so any extra unwanted
+        //dropdowns appearing later are automatically removed
+
         this.setState({
             ...this.state,
             formDropDown: newFormDropDown,
@@ -200,6 +217,7 @@ class QA extends Component{
         console.log(enteredAns.value);
         console.log(selectedNode);
 
+        //POST Request
         fetch('https://groww-chatbot-backend.herokuapp.com/v1/question/', {
             method: 'POST', headers: {
                 'Accept': 'application/json', 'Content-Type': 'application/json',
