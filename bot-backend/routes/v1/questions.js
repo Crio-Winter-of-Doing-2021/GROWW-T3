@@ -2,7 +2,6 @@ import express from "express";
 
 import Question from "../../models/question";
 import ConvNode from "../../models/conv-node";
-import question from "../../models/question";
 
 const router = express.Router();
 
@@ -72,7 +71,7 @@ router.get("/conv-node/:id", (req, res) => [
         ),
 ]);
 
-// @route   GET v1/question
+// @route   GET v1/question?start_id=''&page=''&logged_in='
 // @desc    Get questions
 // @access  Public
 router.get("/", (req, res) => {
@@ -118,6 +117,30 @@ router.get("/", (req, res) => {
     };
 
     getLeaf(start_id);
+});
+
+// @route   POST v1/question?node_id=''&ques_id=''
+// @desc    Post a new question
+// @access  Public
+router.delete("/", (req, res) => {
+    const node_id = req.query.node_id;
+    const ques_id = req.query.ques_id;
+
+    ConvNode.updateOne({ _id: node_id }, { $pullAll: ques_id })
+        .then(() => {
+            Question.deleteOne({ _id: ques_id })
+                .then(() => {
+                    res.status(200).json({ status: "Delete Successful" });
+                })
+                .catch((err) =>
+                    res
+                        .status(400)
+                        .json({ error: "Some Error Occured : " + err })
+                );
+        })
+        .catch((err) =>
+            res.status(400).json({ error: "Some Error Occured : " + err })
+        );
 });
 
 export default router;
