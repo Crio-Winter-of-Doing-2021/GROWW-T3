@@ -1,6 +1,9 @@
 import { createChatBotMessage } from "react-chatbot-kit";
+import GrowwLogo from '../../../Assets/groww-logo.png';
 
 import GeneralOptions from "../Widgets/General Options/GeneralOptions";
+
+import Classes from './Config.module.css';
 
 let botName = "GrowwBot";
 
@@ -13,6 +16,10 @@ const config = {
         chatButton: {
             backgroundColor: "#5367FF",
         },
+    },
+    customComponents:{
+
+        botAvatar: (props) => <img src = {GrowwLogo} className = {Classes.logoStyle}/>
     },
     initialMessages: [
         createChatBotMessage(`Hi, I'm ${botName} 🤖. How may I help you ?`, {

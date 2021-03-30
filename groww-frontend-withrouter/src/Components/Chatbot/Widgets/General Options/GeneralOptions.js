@@ -2,16 +2,17 @@ import React, { useEffect } from "react";
 import Options from "../Options/Options";
 
 const GeneralOptions = (props) => {
+
     let currPage = window.location.href.split("/");
     currPage = currPage[currPage.length - 1];
 
-    //Mappint the URL to the NODE_ID
+    //Mapping the URL to the NODE_ID
     //For now, the "us-stocks" page is routing to STOCKS because it's node hasn't been implemented
     //in the category tree
     switch(currPage){
 
         case "stocks" : currPage = "STOCKS"
-                break;
+            break;
         case "mutual-funds" : currPage = "MUTUAL_FUNDS"
             break;
         case "deposits" : currPage = "FDS"
@@ -22,6 +23,7 @@ const GeneralOptions = (props) => {
             break;
         case "orders" : currPage = "ORDERS"
             break;
+
     }
 
     const { setState } = props;
