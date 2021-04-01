@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BrandLogo from '../../Assets/logo-dark-groww.83f43714.svg';
 
+import LoginModal from '../LoginModal/LoginModal';
+
 import {Link} from 'react-router-dom';
 
 import Classes from './Navbar.module.css';
@@ -9,11 +11,42 @@ class Navbar extends Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            user_logged_in: false,
+        }
     }
 
     //The routes are received as props
    routes = this.props.routes;
 
+    loginGetUserHandler = (user_id) => {
+
+        console.log(user_id);
+        if(!user_id)
+            return;
+
+        fetch('https://groww-bot-backend.herokuapp.com/v1/user/' + user_id)
+            .then(r=>r.json())
+            .then(data => {
+                console.log(data);
+                let userData = data['data'];
+                this.setState({
+                    user_logged_in: true,
+                });
+                this.props.userObjLogin(userData);
+            });
+
+    }
+
+
+    logoutHandler = () => {
+
+        console.log("In Logout Handler");
+        this.setState({
+            user_logged_in: false,
+        });
+
+    }
 
     render(){
 
@@ -42,6 +75,17 @@ class Navbar extends Component{
         //The i variable is used to traverse through the array and assign the different active values
         let i = 0;
 
+        const loginBtn =
+            (<button type = "button" className = "btn btn-primary" data-toggle="modal" data-target="#loginModal">
+                    Login
+                </button>);
+
+
+        const logOutBtn =
+            (<button className = "btn btn-primary" onClick={this.logoutHandler}>
+                Logout
+            </button>);
+
         return(
           <div>
 
@@ -55,6 +99,11 @@ class Navbar extends Component{
                       </div>
 
                       {/*This is the line of the navbar to the different tags to navigate between the pages*/}
+
+
+                      {this.state.user_logged_in ? logOutBtn: loginBtn}
+
+                      <LoginModal loginGetUserHandler = {this.loginGetUserHandler}/>
 
                   </div>
 

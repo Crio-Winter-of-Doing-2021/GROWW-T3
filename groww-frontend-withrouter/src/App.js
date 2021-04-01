@@ -8,7 +8,6 @@ import './App.css';
 //My Defined Components
 import LandingPage from '../src/Screens/Landing/LandingPage';
 import Dashboard from "./Components/HOC/Dashboard/Dashboard";
-
 function App() {
   return (
     <div>
