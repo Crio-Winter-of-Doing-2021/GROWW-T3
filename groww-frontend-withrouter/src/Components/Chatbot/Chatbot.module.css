@@ -1,0 +1,16 @@
+.chatBotStyling{
+
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 9999;
+
+    margin: 40px 0;
+
+    justify-content: center;
+    display: flex;
+
+    box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
+    border-radius: 5px;
+
+}
