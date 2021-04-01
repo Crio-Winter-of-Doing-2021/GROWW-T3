@@ -21,7 +21,8 @@ class Dashboard extends Component{
         super(props);
 
         this.state = {
-            chatbotOn: false
+            chatbotOn: false,
+            userObj: null,
         }
     }
 
@@ -42,12 +43,22 @@ class Dashboard extends Component{
 
     }
 
+    userObjLogin = (user_obj) => {
+
+        console.log(user_obj);
+        this.setState({
+            ...this.state,
+            userObj: user_obj,
+        })
+
+    }
+
     render() {
         return (
 
             <div>
 
-                <Navbar routes={this.routes}/>
+                <Navbar routes={this.routes} userObjLogin = {this.userObjLogin}/>
 
                 <Switch>
                     <Route path="/dashboard/stocks" component={Stocks} exact/>
