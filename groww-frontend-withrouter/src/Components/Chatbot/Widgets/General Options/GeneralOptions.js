@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import Options from "../Options/Options";
 
 import AuthContext from "../../../../Contexts/AuthContext";
@@ -8,6 +8,8 @@ const GeneralOptions = (props) => {
 
     let currPage = window.location.href.split("/");
     currPage = currPage[currPage.length - 1];
+
+    const [showOptions, setShowOptions] = useState(true);
 
     //Mapping the URL to the NODE_ID
     //For now, the "us-stocks" page is routing to STOCKS because it's node hasn't been implemented
@@ -69,6 +71,13 @@ const GeneralOptions = (props) => {
             });
     }, []);
 
-    return <Options options={options} title="Options" {...props} />;
+    return showOptions ? (
+        <Options
+            options={options}
+            title="Options"
+            {...props}
+            setShowOptions={setShowOptions}
+        />
+    ) : null;
 };
 export default GeneralOptions;
