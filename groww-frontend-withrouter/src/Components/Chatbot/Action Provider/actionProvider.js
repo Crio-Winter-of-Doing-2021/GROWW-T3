@@ -25,7 +25,9 @@ class ActionProvider {
     handleAnswer = (option) => {
         const clientMessage = this.createClientMessage(option.name);
         this.addMessageToBotState(clientMessage);
-        const botMessage = this.createChatBotMessage(option.answer);
+        const botMessage = this.createChatBotMessage(option.answer, {
+            widget: "options",
+        });
         this.addMessageToBotState(botMessage);
     };
 

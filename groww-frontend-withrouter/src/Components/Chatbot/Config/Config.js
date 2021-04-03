@@ -30,6 +30,8 @@ const config = {
     ],
     state: {
         options: [],
+        logged_in: false,
+        currPage: "DEFAULT",
     },
     widgets: [
         {
