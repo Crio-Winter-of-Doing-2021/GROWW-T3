@@ -83,20 +83,6 @@ router.get("/", (req, res) => {
     // Hit Grooww backend to get user object
     let user = null;
 
-    if (logged_in === "LOGGED_IN") {
-        request(
-            "https://groww-bot-backend.herokuapp.com/v1/user/" +
-                user_account_id,
-            (err, res, body) => {
-                body = JSON.parse(body);
-                user = body.data.user;
-                getLeaf(start_id);
-            }
-        );
-    } else {
-        getLeaf(start_id);
-    }
-
     const getLeaf = (id) => {
         ConvNode.findOne({ _id: id })
             .then((node) => {
@@ -133,6 +119,20 @@ router.get("/", (req, res) => {
                 res.status(400).json({ error: "Some Error Occured : " + err })
             );
     };
+
+    if (logged_in === "LOGGED_IN") {
+        request(
+            "https://groww-bot-backend.herokuapp.com/v1/user/" +
+                user_account_id,
+            (err, res, body) => {
+                body = JSON.parse(body);
+                user = body.data.user;
+                getLeaf(start_id);
+            }
+        );
+    } else {
+        getLeaf(start_id);
+    }
 });
 
 export default router;
