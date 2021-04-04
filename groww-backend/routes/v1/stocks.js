@@ -18,4 +18,17 @@ router.get("/", (req, res) => {
         );
 });
 
+// @route   GET v1/stocks/:id
+// @desc    Get all available stocks
+// @access  Public
+router.get("/:id", (req, res) => {
+    StocksList.findOne({ "company.isin": req.params.id })
+        .then((stock) => {
+            res.status(200).json(stock);
+        })
+        .catch((err) =>
+            res.status(400).json({ error: "Some Error Occured : " + err })
+        );
+});
+
 export default router;
