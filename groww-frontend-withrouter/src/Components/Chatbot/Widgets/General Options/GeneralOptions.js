@@ -70,6 +70,12 @@ const GeneralOptions = (props) => {
                     i += 1;
                 });
 
+                options.push({
+                    name: "Contact us",
+                    handler: props.actionProvider.handleContactUs,
+                    id: i,
+                });
+
                 setState((state) => {
                     return { ...state, options: options };
                 });

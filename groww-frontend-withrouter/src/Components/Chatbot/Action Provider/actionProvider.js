@@ -31,6 +31,15 @@ class ActionProvider {
         this.addMessageToBotState(botMessage);
     };
 
+    handleContactUs = (option) => {
+        const clientMessage = this.createClientMessage(option.name);
+        this.addMessageToBotState(clientMessage);
+        const botMessage = this.createChatBotMessage("Enter your email id:", {
+            widget: "email-box",
+        });
+        this.addMessageToBotState(botMessage);
+    };
+
     // Default Response
     handleDefault = () => {
         const message = this.createChatBotMessage(

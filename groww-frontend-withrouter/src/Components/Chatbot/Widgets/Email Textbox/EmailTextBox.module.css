@@ -1,0 +1,14 @@
+.submitBtn {
+    border-radius: 25px;
+    padding: 8px;
+    border: 0px;
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 4px 4px;
+    background: #00c798;
+}
+
+.textbox {
+    border-radius: 2px;
+    border: 1px solid #666;
+}
