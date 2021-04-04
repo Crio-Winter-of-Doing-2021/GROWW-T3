@@ -1,8 +1,8 @@
 import express from "express";
+import request from "request";
 
 import Question from "../../models/question";
 import ConvNode from "../../models/conv-node";
-import question from "../../models/question";
 
 const router = express.Router();
 
@@ -11,10 +11,9 @@ const router = express.Router();
 // @access  Public
 router.post("/", (req, res) => {
     const answer = "return '" + req.body.answer + "'";
-    console.log(answer);
     Question.create({
         question: req.body.question,
-        answer: new Function("page", answer),
+        answer: new Function("page", "user", answer),
     })
         .then((ques) => {
             ConvNode.findOneAndUpdate(
@@ -79,6 +78,24 @@ router.get("/", (req, res) => {
     const start_id = req.query.start_id;
     const page = req.query.page;
     const logged_in = req.query.logged_in;
+    const user_account_id = req.query.user_id;
+
+    // Hit Grooww backend to get user object
+    let user = null;
+
+    if (logged_in === "LOGGED_IN") {
+        request(
+            "https://groww-bot-backend.herokuapp.com/v1/user/" +
+                user_account_id,
+            (err, res, body) => {
+                body = JSON.parse(body);
+                user = body.data.user;
+                getLeaf(start_id);
+            }
+        );
+    } else {
+        getLeaf(start_id);
+    }
 
     const getLeaf = (id) => {
         ConvNode.findOne({ _id: id })
@@ -97,7 +114,7 @@ router.get("/", (req, res) => {
                                 let question = {
                                     _id: ques._id,
                                     question: ques.question,
-                                    answer: ques.answer(page),
+                                    answer: ques.answer(page, user),
                                 };
                                 node.questions.push(question);
                             });
@@ -116,8 +133,6 @@ router.get("/", (req, res) => {
                 res.status(400).json({ error: "Some Error Occured : " + err })
             );
     };
-
-    getLeaf(start_id);
 });
 
 export default router;
