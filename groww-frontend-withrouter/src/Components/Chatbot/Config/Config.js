@@ -3,6 +3,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import GrowwLogo from "../../../Assets/groww-logo.png";
 
 import GeneralOptions from "../Widgets/General Options/GeneralOptions";
+import EmailTextBox from "../Widgets/Email Textbox/EmailTextBox";
 
 import Classes from "./Config.module.css";
 
@@ -38,6 +39,10 @@ const config = {
             widgetName: "options",
             widgetFunc: (props) => <GeneralOptions {...props} />,
             mapStateToProps: ["options"],
+        },
+        {
+            widgetName: "email-box",
+            widgetFunc: (props) => <EmailTextBox {...props} />,
         },
     ],
 };
