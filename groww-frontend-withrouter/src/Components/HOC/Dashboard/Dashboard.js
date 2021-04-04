@@ -15,6 +15,7 @@ import GrowwChatbot from "../../Chatbot/Chatbot";
 import growwLogo from "../../../Assets/groww-logo.png";
 import Classes from "./Dashboard.module.css";
 import AuthContext from "../../../Contexts/AuthContext";
+import UserDataContext from "../../../Contexts/UserDataContext";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -37,7 +38,6 @@ class Dashboard extends Component {
     ];
 
     chatbotToggleHandler = () => {
-        console.log("Hello");
         let chatBotOn = this.state.chatbotOn;
 
         this.setState({
@@ -63,62 +63,70 @@ class Dashboard extends Component {
     render() {
         return (
             <AuthContext.Provider value={this.state.userLoggedIn}>
-                <div>
-                    <Navbar
-                        routes={this.routes}
-                        userObjLogin={this.userObjLogin}
-                        userLoginStatus={this.userLoginStatus}
-                    />
+                <UserDataContext.Provider value={this.state.userObj}>
+                    <div>
+                        <Navbar
+                            routes={this.routes}
+                            userObjLogin={this.userObjLogin}
+                            userLoginStatus={this.userLoginStatus}
+                        />
 
-                    <Switch>
-                        <Route
-                            path="/dashboard/stocks"
-                            component={Stocks}
-                            exact
-                        />
-                        <Route
-                            path="/dashboard/mutual-funds"
-                            component={MutualFunds}
-                            exact
-                        />
-                        <Route
-                            path="/dashboard/deposits"
-                            component={FixedDeposits}
-                            exact
-                        />
-                        <Route path="/dashboard/gold" component={Gold} exact />
-                        <Route
-                            path="/dashboard/us-stocks"
-                            component={USStocks}
-                            exact
-                        />
-                        <Route
-                            path="/dashboard/orders"
-                            component={Orders}
-                            exact
-                        />
-                    </Switch>
+                        <Switch>
+                            <Route
+                                path="/dashboard/stocks"
+                                component={Stocks}
+                                exact
+                            />
+                            <Route
+                                path="/dashboard/mutual-funds"
+                                component={MutualFunds}
+                                exact
+                            />
+                            <Route
+                                path="/dashboard/deposits"
+                                component={FixedDeposits}
+                                exact
+                            />
+                            <Route
+                                path="/dashboard/gold"
+                                component={Gold}
+                                exact
+                            />
+                            <Route
+                                path="/dashboard/us-stocks"
+                                component={USStocks}
+                                exact
+                            />
+                            <Route
+                                path="/dashboard/orders"
+                                component={Orders}
+                                exact
+                            />
+                        </Switch>
 
-                    <div
-                        style={{
-                            display: this.state.chatbotOn ? "block" : "none",
-                        }}
-                    >
-                        <GrowwChatbot />
+                        <div
+                            style={{
+                                display: this.state.chatbotOn
+                                    ? "block"
+                                    : "none",
+                            }}
+                        >
+                            <GrowwChatbot />
+                        </div>
+
+                        {/*Setting up the chatbot button at the bottom of the site*/}
+                        <button
+                            className={Classes.chatbotToggleBtn}
+                            onClick={this.chatbotToggleHandler}
+                        >
+                            <img
+                                src={growwLogo}
+                                alt="Groww Logo"
+                                className={Classes.logoStyling}
+                            />
+                        </button>
                     </div>
-
-                    {/*Setting up the chatbot button at the bottom of the site*/}
-                    <button
-                        className={Classes.chatbotToggleBtn}
-                        onClick={this.chatbotToggleHandler}
-                    >
-                        <img
-                            src={growwLogo}
-                            alt="Groww Logo"
-                            className={Classes.logoStyling}
-                        />
-                    </button>
-                </div>
+                </UserDataContext.Provider>
             </AuthContext.Provider>
         );
     }
