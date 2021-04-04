@@ -21,7 +21,7 @@ class Dashboard extends Component {
         super(props);
 
         this.state = {
-            chatbotOn: false,
+            chatbotOn: true,
             userObj: null,
             userLoggedIn: false,
         };
@@ -60,6 +60,16 @@ class Dashboard extends Component {
         });
     };
 
+    changingRoute = () => {
+
+        this.chatbotToggleHandler();
+
+        setTimeout(() => {
+            document.getElementById("chtbtn").click();
+        }, 10);
+
+    }
+
     render() {
         return (
             <AuthContext.Provider value={this.state.userLoggedIn}>
@@ -68,6 +78,7 @@ class Dashboard extends Component {
                         routes={this.routes}
                         userObjLogin={this.userObjLogin}
                         userLoginStatus={this.userLoginStatus}
+                        toggleChatbot = {this.changingRoute}
                     />
 
                     <Switch>
@@ -99,16 +110,18 @@ class Dashboard extends Component {
                         />
                     </Switch>
 
-                    <div
-                        style={{
-                            display: this.state.chatbotOn ? "block" : "none",
-                        }}
-                    >
-                        <GrowwChatbot />
-                    </div>
+                    {/*<div*/}
+                    {/*    style={{*/}
+                    {/*        display: this.state.chatbotOn ? "block" : "none",*/}
+                    {/*    }}*/}
+                    {/*>*/}
+                    {/*    <GrowwChatbot />*/}
+                    {/*</div>*/}
+                    {this.state.chatbotOn ? <GrowwChatbot />: null}
 
                     {/*Setting up the chatbot button at the bottom of the site*/}
                     <button
+                        id = "chtbtn"
                         className={Classes.chatbotToggleBtn}
                         onClick={this.chatbotToggleHandler}
                     >

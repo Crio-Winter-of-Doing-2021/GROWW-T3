@@ -33,6 +33,7 @@ class Navbar extends Component {
                 });
                 this.props.userLoginStatus(true);
                 this.props.userObjLogin(userData);
+                this.props.toggleChatbot();
             });
     };
 
@@ -42,6 +43,7 @@ class Navbar extends Component {
             user_logged_in: false,
         });
         this.props.userLoginStatus(false);
+        this.props.toggleChatbot();
     };
 
     render() {
@@ -112,6 +114,7 @@ class Navbar extends Component {
                         <ul className="nav nav-tabs">
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/stocks"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
@@ -122,6 +125,7 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/mutual-funds"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
@@ -132,6 +136,7 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/deposits"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
@@ -142,6 +147,7 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/gold"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
@@ -152,6 +158,7 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/us-stocks"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
@@ -162,6 +169,7 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    onClick = {this.props.toggleChatbot}
                                     to="/dashboard/orders"
                                     className={`${activeClassArray[i++]} ${
                                         Classes.linksConfig
