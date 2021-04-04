@@ -2,9 +2,11 @@ import React, { useEffect, useContext, useState } from "react";
 import Options from "../Options/Options";
 
 import AuthContext from "../../../../Contexts/AuthContext";
+import UserDataContext from "../../../../Contexts/UserDataContext";
 
 const GeneralOptions = (props) => {
     const logged_in_flag = useContext(AuthContext);
+    const user_data = useContext(UserDataContext);
 
     let currPage = window.location.href.split("/");
     currPage = currPage[currPage.length - 1];
@@ -36,6 +38,7 @@ const GeneralOptions = (props) => {
     }
 
     const logged_in = logged_in_flag ? "LOGGED_IN" : "NOT_LOGGED_IN";
+    const user_id = user_data === null ? null : user_data.user.user_account_id;
 
     const { setState } = props;
 
@@ -48,6 +51,8 @@ const GeneralOptions = (props) => {
                 currPage +
                 "&logged_in=" +
                 logged_in +
+                "&user_id=" +
+                user_id +
                 "&start_id=root"
         )
             .then((response) => response.json())
