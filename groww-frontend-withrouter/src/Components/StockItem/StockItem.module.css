@@ -1,0 +1,19 @@
+.crd{
+    width: 15rem;
+}
+
+.imgSize{
+    width: 95%;
+    max-height: 95%;
+    display: block;
+    margin: auto;
+}
+
+.imgCont{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
