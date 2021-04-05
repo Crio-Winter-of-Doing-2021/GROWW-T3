@@ -11,6 +11,8 @@ const GeneralOptions = (props) => {
     let currPage = window.location.href.split("/");
     currPage = currPage[currPage.length - 1];
 
+    let stockID = currPage;
+
     const [showOptions, setShowOptions] = useState(true);
 
     //Mapping the URL to the NODE_ID
@@ -35,6 +37,9 @@ const GeneralOptions = (props) => {
         case "orders":
             currPage = "ORDERS";
             break;
+        default:
+            currPage = "SPEC_STOCK";
+            break;
     }
 
     const logged_in = logged_in_flag ? "LOGGED_IN" : "NOT_LOGGED_IN";
@@ -53,6 +58,8 @@ const GeneralOptions = (props) => {
                 logged_in +
                 "&user_id=" +
                 user_id +
+                "&stock_id=" +
+                stockID +
                 "&start_id=root"
         )
             .then((response) => response.json())
