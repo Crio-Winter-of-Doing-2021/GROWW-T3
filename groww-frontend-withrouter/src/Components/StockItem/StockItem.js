@@ -2,7 +2,7 @@ import React from 'react';
 import Classes from './StockItem.module.css';
 import {Link} from "react-router-dom";
 
-const StockItem = ({stock}) => {
+const StockItem = ({stock, updChatbot}) => {
 
     let p = "/dashboard/stocks/" + stock.company.isin;
     return (
@@ -20,7 +20,7 @@ const StockItem = ({stock}) => {
                     <p>LTP: {stock.stats.ltp}</p>
                     <p>HIGH: {stock.stats.high}</p>
                     <p>LOW: {stock.stats.low}</p>
-                    <Link to={p} className = "btn btn-primary"> See More</Link>
+                    <Link to={p} onClick={updChatbot} className = "btn btn-primary"> See More</Link>
                 </div>
 
             </div>
