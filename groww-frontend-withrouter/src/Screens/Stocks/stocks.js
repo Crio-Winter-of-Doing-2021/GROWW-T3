@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import stocksDetails from '../../fixtures/stocks.json';
 import StockItem from '../../Components/StockItem/StockItem';
 import Classes from './stocks.module.css';
 
-function Stocks(){
+const Stocks = () => {
+
+    const [stocks, setStocks] = useState([]);
+
+    useEffect(() => {
+
+        fetch('https://groww-bot-backend.herokuapp.com/v1/stocks')
+            .then(r=>r.json())
+            .then(data => {
+               console.log(data);
+               setStocks(data);
+            });
+
+    });
 
     return (
         <div className = "container">
             Stocks Page
             <div className = "row">
-                {stocksDetails.exploreCompanies.MOST_VALUABLE.map(stock => <StockItem stock={stock} />)}
+                {stocks ? stocks.map(stock => <StockItem stock={stock} key = {stock.id}/>) : null}
             </div>
         </div>
-    )
+    );
 
 }
 
