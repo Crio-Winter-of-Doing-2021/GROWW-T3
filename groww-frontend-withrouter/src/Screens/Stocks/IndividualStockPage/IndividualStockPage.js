@@ -1,34 +1,46 @@
-import React from 'react';
-import stockDetails from '../../../fixtures/stocks.json';
-import stocksDetails from "../../../fixtures/stocks.json";
+import React, {useEffect, useState} from 'react';
 
-const individualStock = (props) => {
+const IndividualStock = () => {
 
-    let currId = window.location.href.split("/");
-    currId = currId[currId.length - 1];
+    const [currStock, setcurrStock] = useState(null);
 
-    let arrayOfStocks = stocksDetails.exploreCompanies.MOST_VALUABLE;
-    let currStock;
-    for (let i = 0; i < arrayOfStocks.length; i++) {
+    useEffect(() => {
 
-        if (arrayOfStocks[i].company.isin == currId) {
-            currStock = arrayOfStocks[i];
-        }
+        fetch('https://groww-bot-backend.herokuapp.com/v1/stocks')
+            .then(r=>r.json())
+            .then(data => {
+                console.log(data);
 
-    }
+                let currId = window.location.href.split("/");
+                currId = currId[currId.length - 1];
+
+                let arrayOfStocks = data;
+                for (let i = 0; i < arrayOfStocks.length; i++) {
+
+                    if (arrayOfStocks[i].company.isin === currId) {
+                        setcurrStock(arrayOfStocks[i]);
+                        break;
+                    }
+
+                }
+
+            });
+
+    });
+
 
     return (
 
         <div className = "container">
-            <img className = "my-4 mx-4" src = {currStock.company.imageUrl} alt = "company logo"/>
-            {currStock.company.companyName}
-            <p>LTP: {currStock.stats.ltp}</p>
-            <p>HIGH: {currStock.stats.high}</p>
-            <p>LOW: {currStock.stats.low}</p>
+            <img className = "my-4 mx-4" src = {currStock ? currStock.company.imageUrl : null} alt = "company logo"/>
+            {currStock ? currStock.company.companyName : null}
+            <p>LTP: {currStock ? currStock.stats.ltp : null}</p>
+            <p>HIGH: {currStock ? currStock.stats.high : null}</p>
+            <p>LOW: {currStock ? currStock.stats.low : null}</p>
         </div>
 
     );
 
 }
 
-export default individualStock;
+export default IndividualStock;
