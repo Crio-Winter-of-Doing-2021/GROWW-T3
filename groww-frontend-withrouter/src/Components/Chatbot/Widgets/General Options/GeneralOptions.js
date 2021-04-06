@@ -8,9 +8,11 @@ const GeneralOptions = (props) => {
     const logged_in_flag = useContext(AuthContext);
     const user_data = useContext(UserDataContext);
 
-    let currPage = window.location.href.split("/");
-    currPage = currPage[currPage.length - 1];
-    let parentPage = currPage[currPage.length - 2];
+    const urlArr = window.location.href.split("/");
+    let currPage = urlArr[urlArr.length - 1];
+    let parentPage = urlArr[urlArr.length - 2];
+
+    console.log(parentPage, currPage);
 
     let stockID = currPage;
 
