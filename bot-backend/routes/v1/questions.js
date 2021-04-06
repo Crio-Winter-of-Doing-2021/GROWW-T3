@@ -13,7 +13,7 @@ router.post("/", (req, res) => {
     const answer = "return '" + req.body.answer + "'";
     Question.create({
         question: req.body.question,
-        answer: new Function("page", "user", answer),
+        answer: new Function("page", "user", "stock", answer),
     })
         .then((ques) => {
             ConvNode.findOneAndUpdate(
@@ -101,7 +101,7 @@ router.get("/", (req, res) => {
                                 let question = {
                                     _id: ques._id,
                                     question: ques.question,
-                                    answer: ques.answer(page, user),
+                                    answer: ques.answer(page, user, stock),
                                 };
                                 node.questions.push(question);
                             });
