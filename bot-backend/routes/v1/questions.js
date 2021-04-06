@@ -1,5 +1,5 @@
 import express from "express";
-import request from "request";
+import fetch from "node-fetch";
 
 import Question from "../../models/question";
 import ConvNode from "../../models/conv-node";
@@ -87,6 +87,7 @@ router.get("/", (req, res) => {
 
     const getLeaf = (id) => {
         console.log("Getting Node...");
+        console.log(id);
         ConvNode.findOne({ _id: id })
             .then((node) => {
                 if (node == null) {
@@ -121,39 +122,41 @@ router.get("/", (req, res) => {
             );
     };
 
-    const load_user = async () => {
+    const load_user = () => {
         console.log("Loading User...");
         if (logged_in === "LOGGED_IN") {
-            await request(
+            fetch(
                 "https://groww-bot-backend.herokuapp.com/v1/user/" +
-                    user_account_id,
-                (err, res, body) => {
-                    body = JSON.parse(body);
-                    user = body.data.user;
-                }
-            );
+                    user_account_id
+            )
+                .then((data) => data.json())
+                .then((data) => {
+                    user = data.user;
+                    getLeaf(start_id);
+                });
+        } else {
+            getLeaf(start_id);
         }
     };
 
     const load_stock = async () => {
         console.log("Loading Stock...");
         if (page === "STOCK_SPEC") {
-            await request(
-                "https://groww-bot-backend.herokuapp.com/v1/stocks/" + stock_id,
-                (err, res, body) => {
-                    body = JSON.parse(body);
-                    if (body != null) {
-                        stock = body.data;
-                    }
-                }
-            );
+            fetch(
+                "https://groww-bot-backend.herokuapp.com/v1/stocks/" + stock_id
+            )
+                .then((data) => data.json())
+                .then((data) => {
+                    stock = data;
+                    load_user();
+                });
+        } else {
+            load_user();
         }
     };
 
-    const load_all_data = async () => {
+    const load_all_data = () => {
         load_stock();
-        load_user();
-        getLeaf(start_id);
     };
 
     load_all_data();
