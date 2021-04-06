@@ -86,6 +86,7 @@ router.get("/", (req, res) => {
     let stock = null;
 
     const getLeaf = (id) => {
+        console.log("Getting Node...");
         ConvNode.findOne({ _id: id })
             .then((node) => {
                 if (node == null) {
@@ -121,6 +122,7 @@ router.get("/", (req, res) => {
     };
 
     const load_user = async () => {
+        console.log("Loading User...");
         if (logged_in === "LOGGED_IN") {
             await request(
                 "https://groww-bot-backend.herokuapp.com/v1/user/" +
@@ -134,21 +136,24 @@ router.get("/", (req, res) => {
     };
 
     const load_stock = async () => {
+        console.log("Loading Stock...");
         if (page === "STOCK_SPEC") {
             await request(
                 "https://groww-bot-backend.herokuapp.com/v1/stocks/" + stock_id,
                 (err, res, body) => {
                     body = JSON.parse(body);
-                    stock = body.data.stock;
+                    if (body != null) {
+                        stock = body.data;
+                    }
                 }
             );
         }
     };
 
     const load_all_data = async () => {
-        await load_stock();
-        await load_user();
-        await getLeaf(start_id);
+        load_stock();
+        load_user();
+        getLeaf(start_id);
     };
 
     load_all_data();
