@@ -8,32 +8,50 @@ const GeneralOptions = (props) => {
     const logged_in_flag = useContext(AuthContext);
     const user_data = useContext(UserDataContext);
 
-    let currPage = window.location.href.split("/");
-    currPage = currPage[currPage.length - 1];
+    const urlArr = window.location.href.split("/");
+    let currPage = urlArr[urlArr.length - 1];
+    let parentPage = urlArr[urlArr.length - 2];
+
+    console.log(parentPage, currPage);
+
+    let stockID = currPage;
 
     const [showOptions, setShowOptions] = useState(true);
 
     //Mapping the URL to the NODE_ID
     //For now, the "us-stocks" page is routing to STOCKS because it's node hasn't been implemented
     //in the category tree
-    switch (currPage) {
+    switch (parentPage) {
+        case "dashboard":
+            switch (currPage) {
+                case "stocks":
+                    currPage = "STOCKS";
+                    break;
+                case "mutual-funds":
+                    currPage = "MUTUAL_FUNDS";
+                    break;
+                case "deposits":
+                    currPage = "FDS";
+                    break;
+                case "gold":
+                    currPage = "GOLD";
+                    break;
+                case "us-stocks":
+                    currPage = "STOCKS";
+                    break;
+                case "orders":
+                    currPage = "ORDERS";
+                    break;
+                default:
+                    currPage = "DEFAULT";
+                    break;
+            }
+            break;
         case "stocks":
-            currPage = "STOCKS";
+            currPage = "STOCK_SPEC";
             break;
-        case "mutual-funds":
-            currPage = "MUTUAL_FUNDS";
-            break;
-        case "deposits":
-            currPage = "FDS";
-            break;
-        case "gold":
-            currPage = "GOLD";
-            break;
-        case "us-stocks":
-            currPage = "STOCKS";
-            break;
-        case "orders":
-            currPage = "ORDERS";
+        default:
+            currPage = "DEFAULT";
             break;
     }
 
@@ -53,6 +71,8 @@ const GeneralOptions = (props) => {
                 logged_in +
                 "&user_id=" +
                 user_id +
+                "&stock_id=" +
+                stockID +
                 "&start_id=root"
         )
             .then((response) => response.json())

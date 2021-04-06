@@ -17,6 +17,8 @@ import Classes from "./Dashboard.module.css";
 import AuthContext from "../../../Contexts/AuthContext";
 import UserDataContext from "../../../Contexts/UserDataContext";
 
+import IndividualStockPage from "../../../Screens/Stocks/IndividualStockPage/IndividualStockPage";
+
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -88,6 +90,10 @@ class Dashboard extends Component {
                                 component={Stocks}
                                 exact
                             />
+
+                            <Route path = "/dashboard/stocks/:id"
+                                   component = {IndividualStockPage}
+                                   />
                             <Route
                                 path="/dashboard/mutual-funds"
                                 component={MutualFunds}
