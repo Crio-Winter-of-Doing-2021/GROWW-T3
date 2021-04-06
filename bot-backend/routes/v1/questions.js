@@ -79,17 +79,17 @@ router.get("/", (req, res) => {
     const page = req.query.page;
     const logged_in = req.query.logged_in;
     const user_account_id = req.query.user_id;
+    const stock_id = req.query.stock_id;
 
     // Hit Grooww backend to get user object
     let user = null;
+    let stock = null;
 
     const getLeaf = (id) => {
         ConvNode.findOne({ _id: id })
             .then((node) => {
                 if (node == null) {
-                    res.status(404).json({
-                        error: "No Node with id '" + id + "'found",
-                    });
+                    getLeaf("DEFAULT");
                 } else if (node.isLeafNode) {
                     Question.find({
                         _id: { $in: node.questions },
@@ -120,19 +120,38 @@ router.get("/", (req, res) => {
             );
     };
 
-    if (logged_in === "LOGGED_IN") {
-        request(
-            "https://groww-bot-backend.herokuapp.com/v1/user/" +
-                user_account_id,
-            (err, res, body) => {
-                body = JSON.parse(body);
-                user = body.data.user;
-                getLeaf(start_id);
-            }
-        );
-    } else {
-        getLeaf(start_id);
-    }
+    const load_user = async () => {
+        if (logged_in === "LOGGED_IN") {
+            await request(
+                "https://groww-bot-backend.herokuapp.com/v1/user/" +
+                    user_account_id,
+                (err, res, body) => {
+                    body = JSON.parse(body);
+                    user = body.data.user;
+                }
+            );
+        }
+    };
+
+    const load_stock = async () => {
+        if (page === "STOCK_SPEC") {
+            await request(
+                "https://groww-bot-backend.herokuapp.com/v1/stocks/" + stock_id,
+                (err, res, body) => {
+                    body = JSON.parse(body);
+                    stock = body.data.stock;
+                }
+            );
+        }
+    };
+
+    const load_all_data = async () => {
+        await load_stock();
+        await load_user();
+        await getLeaf(start_id);
+    };
+
+    load_all_data();
 });
 
 export default router;
