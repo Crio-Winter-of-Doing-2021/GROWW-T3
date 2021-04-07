@@ -3,7 +3,7 @@ import stocksDetails from '../../fixtures/stocks.json';
 import StockItem from '../../Components/StockItem/StockItem';
 import Classes from './stocks.module.css';
 
-const Stocks = () => {
+const Stocks = (props) => {
 
     const [stocks, setStocks] = useState([]);
 
@@ -22,7 +22,7 @@ const Stocks = () => {
         <div className = "container">
             Stocks Page
             <div className = "row">
-                {stocks ? stocks.map(stock => <StockItem stock={stock} key = {stock.id}/>) : null}
+                {stocks ? stocks.map(stock => <StockItem stock={stock} key = {stock.id} updChatbot = {props.updChatbot} />) : null}
             </div>
         </div>
     );

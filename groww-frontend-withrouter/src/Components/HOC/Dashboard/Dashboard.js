@@ -18,6 +18,7 @@ import AuthContext from "../../../Contexts/AuthContext";
 import UserDataContext from "../../../Contexts/UserDataContext";
 
 import IndividualStockPage from "../../../Screens/Stocks/IndividualStockPage/IndividualStockPage";
+import StockItem from "../../StockItem/StockItem";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -87,7 +88,8 @@ class Dashboard extends Component {
                         <Switch>
                             <Route
                                 path="/dashboard/stocks"
-                                component={Stocks}
+                                // component={Stocks}
+                                render = {() => <Stocks updChatbot = {this.changingRoute} />}
                                 exact
                             />
 
