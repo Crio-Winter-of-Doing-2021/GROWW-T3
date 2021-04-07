@@ -12,6 +12,11 @@ const questionSchema = new Schema({
         type: Function,
         required: true,
     },
+    freq: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
 });
 
 export default mongoose.model("question", questionSchema, "questions");
