@@ -48,28 +48,41 @@ router.get("/all", (req, res) => {
 // @route   GET v1/question/:id
 // @desc    Get question by id
 // @access  Public
-router.get("/:id", (req, res) => [
+router.get("/:id", (req, res) => {
     Question.findOne({ _id: req.params.id })
         .then((question) => res.status(200).json(question))
         .catch((err) =>
             res.status(400).json({
                 error: "Some Error Occured : " + err,
             })
-        ),
-]);
+        );
+});
 
 // @route   GET v1/question/conv-node/:id
 // @desc    Get conv node by id
 // @access  Public
-router.get("/conv-node/:id", (req, res) => [
+router.get("/conv-node/:id", (req, res) => {
     ConvNode.findOne({ _id: req.params.id })
         .then((node) => res.status(200).json(node))
         .catch((err) =>
             res.status(400).json({
                 error: "Some Error Occured : " + err,
             })
-        ),
-]);
+        );
+});
+
+// @route   POST v1/question/freq/:id
+// @desc    Update question freq
+// @access  Public
+router.post("/freq/:id", (req, res) => {
+    Question.updateOne({ _id: req.params.id }, { $inc: { freq: 1 } })
+        .then((node) => res.status(200).json(node))
+        .catch((err) =>
+            res.status(400).json({
+                error: "Some Error Occured : " + err,
+            })
+        );
+});
 
 // @route   GET v1/question
 // @desc    Get questions
@@ -100,7 +113,7 @@ router.get("/", (req, res) => {
                             node.questions = [];
                             questions.forEach((ques) => {
                                 let question = {
-                                    _id: ques._id,
+                                    ques_id: ques._id,
                                     question: ques.question,
                                     answer: ques.answer(page, user, stock),
                                 };
