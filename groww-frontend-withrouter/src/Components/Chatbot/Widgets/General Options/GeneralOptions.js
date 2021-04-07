@@ -85,7 +85,7 @@ const GeneralOptions = (props) => {
                         name: ques.question,
                         handler: props.actionProvider.handleAnswer,
                         answer: ques.answer,
-                        id: i,
+                        id: ques.ques_id,
                     });
                     i += 1;
                 });

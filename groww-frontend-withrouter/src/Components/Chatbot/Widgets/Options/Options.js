@@ -8,6 +8,13 @@ const Options = ({ options, actionProvider, setShowOptions }) => {
             key={option.id}
             className={Classes.option}
             onClick={() => {
+                fetch(
+                    "https://groww-chatbot-backend.herokuapp.com/v1/question/freq/" +
+                        option.id,
+                    {
+                        method: "POST",
+                    }
+                );
                 setShowOptions(false);
                 option.handler(option);
             }}
