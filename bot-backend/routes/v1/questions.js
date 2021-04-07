@@ -144,7 +144,7 @@ router.get("/", (req, res) => {
             )
                 .then((data) => data.json())
                 .then((data) => {
-                    user = data.user;
+                    user = data.data.user;
                     getLeaf(start_id);
                 });
         } else {
