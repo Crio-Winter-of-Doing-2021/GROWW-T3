@@ -50,6 +50,7 @@ router.get("/all", (req, res) => {
 // @access  Public
 router.get("/all-ques", (req, res) => {
     Question.find()
+        .sort({ freq: -1 })
         .then((ques) => res.status(200).json(ques))
         .catch((err) =>
             res.status(400).json({
