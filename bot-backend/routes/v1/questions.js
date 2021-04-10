@@ -33,7 +33,7 @@ router.post("/", (req, res) => {
 });
 
 // @route   GET v1/question/all
-// @desc    Get All questions
+// @desc    Get All nodes
 // @access  Public
 router.get("/all", (req, res) => {
     ConvNode.find()
@@ -51,6 +51,19 @@ router.get("/all", (req, res) => {
 router.get("/:id", (req, res) => {
     Question.findOne({ _id: req.params.id })
         .then((question) => res.status(200).json(question))
+        .catch((err) =>
+            res.status(400).json({
+                error: "Some Error Occured : " + err,
+            })
+        );
+});
+
+// @route   GET v1/question/all-ques
+// @desc    Get All questions
+// @access  Public
+router.get("/all-ques", (req, res) => {
+    Question.find()
+        .then((ques) => res.status(200).json(ques))
         .catch((err) =>
             res.status(400).json({
                 error: "Some Error Occured : " + err,
