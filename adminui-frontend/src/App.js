@@ -1,5 +1,6 @@
 import NavbarAdminFAQ from './Components/NavBarAdminFAQ/navbar';
 import QA from './Components/QAForm/QA';
+import SwitchRoutes from './Components/switchRoutesNav/switchRoutesNav';
 
 import './App.css';
 import {Switch, Route} from "react-router-dom";
@@ -10,6 +11,7 @@ function App() {
 
       <div>
         <NavbarAdminFAQ />
+          <SwitchRoutes />
           <Switch>
               <Route
                 path = "/"

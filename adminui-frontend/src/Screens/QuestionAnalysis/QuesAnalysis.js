@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import QAnsBox from "../../Components/QAnsBox/QAnsBox";
 
+import Classes from './QuesAnalysis.module.css';
+
 const QuesAnalysis = () => {
 
     let [questions, setQuestions] = useState([]);
@@ -18,7 +20,7 @@ const QuesAnalysis = () => {
 
     return(
 
-        <div className = "container">
+        <div className = {`${Classes.ques} container`}>
 
             {questions.map(i=> <QAnsBox key = {i._id} freq = {i.freq} question = {i.question} answer = {i.answer}/>
             )}
