@@ -45,12 +45,12 @@ router.get("/all", (req, res) => {
         );
 });
 
-// @route   GET v1/question/:id
-// @desc    Get question by id
+// @route   GET v1/question/all-ques
+// @desc    Get All questions
 // @access  Public
-router.get("/:id", (req, res) => {
-    Question.findOne({ _id: req.params.id })
-        .then((question) => res.status(200).json(question))
+router.get("/all-ques", (req, res) => {
+    Question.find()
+        .then((ques) => res.status(200).json(ques))
         .catch((err) =>
             res.status(400).json({
                 error: "Some Error Occured : " + err,
@@ -58,12 +58,12 @@ router.get("/:id", (req, res) => {
         );
 });
 
-// @route   GET v1/question/all-ques
-// @desc    Get All questions
+// @route   GET v1/question/:id
+// @desc    Get question by id
 // @access  Public
-router.get("/all-ques", (req, res) => {
-    Question.find()
-        .then((ques) => res.status(200).json(ques))
+router.get("/:id", (req, res) => {
+    Question.findOne({ _id: req.params.id })
+        .then((question) => res.status(200).json(question))
         .catch((err) =>
             res.status(400).json({
                 error: "Some Error Occured : " + err,
