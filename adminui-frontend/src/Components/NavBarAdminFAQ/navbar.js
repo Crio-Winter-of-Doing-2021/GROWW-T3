@@ -9,21 +9,16 @@ class navbar extends Component{
 
         return (
 
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-light bg-light">
 
                 <div className="container">
-
                     <a className="navbar-brand" href="#"><img src={logo} alt={"Groww Logo"} /></a>
-
                     <div className={`${Classes.txt} d-flex`}>
                         <span>Admin FAQs</span>
                     </div>
-
                 </div>
 
-
             </nav>
-
 
         );
 
