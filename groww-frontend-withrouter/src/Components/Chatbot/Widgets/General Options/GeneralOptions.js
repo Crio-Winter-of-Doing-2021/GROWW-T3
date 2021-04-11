@@ -37,7 +37,7 @@ const GeneralOptions = (props) => {
                     currPage = "GOLD";
                     break;
                 case "us-stocks":
-                    currPage = "STOCKS";
+                    currPage = "US_STOCKS";
                     break;
                 case "orders":
                     currPage = "ORDERS";
