@@ -9,7 +9,7 @@ const StockItem = ({stock, updChatbot}) => {
 
         //stock.company.isin
         <div className="col-md-6 col-lg-4 col-xl-3 my-4">
-            <div className={`${Classes.crd} card border-primary`}>
+            <div className={`${Classes.crd} card`}>
 
                 <div className={Classes.imgCont}>
                     <img className={`${Classes.imgSize} card-img-top`} src={stock.company.imageUrl} alt="Company Logo"/>
