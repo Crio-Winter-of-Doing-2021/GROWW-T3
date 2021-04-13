@@ -240,7 +240,7 @@ class QA extends Component{
 
         return(
 
-            <div className = "container">
+            <div className = {Classes.bigContainer}>
 
                 <br />
                 <p className = {`${Classes.hding} mt-4`}>Choose the category and sub-categories of the FAQ first: </p>
@@ -276,9 +276,180 @@ class QA extends Component{
                     </div>
 
                     <div className = {Classes.decoratorsList}>
-                        <p>This is the decorators list: </p>
-                        <li>' + page + '</li>
+
+                        <button className="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Decorators List
+                        </button>
+
+
+                        <div className={`collapse ${Classes.decorators}`} id="collapseExample">
+                            <div className="card card-body">
+
+                                <pre>
+                                <h2>User</h2>
+
+                                user.user_id<br />
+
+                                user.user_account_id<br />
+
+                                user.bse_user_id<br />
+
+                                user.bse_mandate_id<br />
+
+                                user.fno_status<br />
+
+                                user.first_name<br />
+
+                                user.last_name<br />
+
+                                user.email_id<br />
+
+                                user.mobile_number<br />
+
+                                user.country_code<br />
+
+                                user.enabled<br />
+
+                                user.bse_enabled<br />
+
+                                user.mandate_id_linked<br />
+
+                                user.bse_fatca<br />
+
+                                user.email_verified<br />
+
+                                user.has_invitation<br />
+
+                                user.mobile_verified<br />
+
+                                user.aof_enabled<br />
+
+                                user.gmail_user<br />
+
+                                user.connection_imported<br />
+
+                                user.aof_status<br />
+
+                                user.kyc_status<br />
+
+                                user.kyc_details<br />
+
+                                user.onboarding_status<br />
+
+                                user.investment_status<br />
+
+                                user.investment_event_sent<br />
+
+                                user.image_url<br />
+
+                                user.search_id<br />
+
+                                user.description<br />
+
+                                user.author_is_user<br />
+
+                                user.is_kyc_verified<br />
+
+                                user.is_expert <br />
+
+                                user.is_direct_plan <br />
+
+                                user.is_suspended <br />
+
+                                user.blocked_accounts_info.wallet <br />
+
+                                user.blocked_accounts_info.mutualFund <br />
+
+                                user.blocked_accounts_info.stocks <br />
+
+                                user.user_role <br />
+
+                                user.tags <br />
+
+                                user.created_at <br />
+
+                                user.kyc_mode <br />
+
+                                user.utm_source <br />
+
+                                user.utm_medium <br />
+
+                                user.utm_campaign <br />
+
+                                user.utm_ref_code <br />
+
+                                user.super_user_account_id <br />
+
+                                user.is_child_user <br />
+
+                                user.google_account <br />
+
+                                user.stocks_status <br />
+
+                                user.is_stocks_invited <br />
+
+                                user.groww_kyc_status <br />
+
+                                user.demat_account_status <br />
+
+                                <h2>Stock</h2>
+
+                                stock.company.isin <br />
+
+                                stock.company.companyName <br />
+
+                                stock.company.searchId <br />
+
+                                stock.company.nseScriptCode <br />
+
+                                stock.company.companyShortName <br />
+
+                                stock.company.bseScriptCode <br />
+
+                                stock.company.bseScriptGroup <br />
+
+                                stock.company.imageUrl <br />
+
+                                stock.stats.type <br />
+
+                                stock.stats.symbol <br />
+
+                                stock.stats.tsInMillis <br />
+
+                                stock.stats.open <br />
+
+                                stock.stats.high <br />
+
+                                stock.stats.low <br />
+
+                                stock.stats.close <br />
+
+                                stock.stats.ltp <br />
+
+                                stock.stats.dayChange <br />
+
+                                stock.stats.dayChangePerc <br />
+
+                                stock.stats.lowPriceRange <br />
+
+                                stock.stats.highPriceRange <br />
+
+                                stock.stats.volume <br />
+
+                                stock.stats.marketCap <br />
+
+                                stock.stats.totalBuyQty <br />
+
+                                stock.stats.totalSellQty <br />
+
+                                </pre>
+
+                            </div>
+                        </div>
+
                     </div>
+
             </div>
 
         );

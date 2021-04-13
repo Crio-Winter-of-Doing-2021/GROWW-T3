@@ -90,7 +90,7 @@ class Navbar extends Component {
         return (
             <div>
                 <nav className="navbar">
-                    <div className="container-fluid">
+                    <div className="container">
                         {/*Line of navbar with the logo login thing*/}
                         <div className="navbar-brand">
                             <img

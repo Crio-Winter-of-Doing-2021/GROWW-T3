@@ -3,8 +3,8 @@ import React from 'react';
 function gold(){
 
     return(
-        <div>
-            Gold
+        <div className = "container">
+            <h4>Gold</h4>
         </div>
     );
 

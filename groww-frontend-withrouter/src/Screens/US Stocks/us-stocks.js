@@ -3,8 +3,8 @@ import React from 'react';
 function USStocks(){
 
     return(
-        <div>
-            US Stocks
+        <div className = "container">
+            <h4>US Stocks</h4>
         </div>
     );
 

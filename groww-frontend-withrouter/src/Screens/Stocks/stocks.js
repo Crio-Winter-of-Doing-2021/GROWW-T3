@@ -17,7 +17,6 @@ const Stocks = (props) => {
 
     return (
         <div className="container">
-            Stocks Page
             <div className="row">
                 {stocks
                     ? stocks.map((stock) => (

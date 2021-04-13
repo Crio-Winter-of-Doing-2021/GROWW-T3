@@ -4,6 +4,13 @@
 
 }
 
+.bigContainer{
+
+    margin-left: 350px;
+
+
+}
+
 .dropd{
 
     width: 2em;
@@ -14,4 +21,9 @@
     font-size: 18px;
     margin-bottom: 20px;
     margin-top: 10px;
+
+}
+
+.decorators{
+    margin-bottom: 100px;
 }

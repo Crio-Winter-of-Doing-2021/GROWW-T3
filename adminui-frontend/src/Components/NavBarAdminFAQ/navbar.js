@@ -9,7 +9,7 @@ class navbar extends Component{
 
         return (
 
-            <nav className="navbar navbar-light bg-light">
+            <nav className={`navbar navbar-light ${Classes.navbg}`}>
 
                 <div className="container">
                     <a className="navbar-brand" href="#"><img src={logo} alt={"Groww Logo"} /></a>
