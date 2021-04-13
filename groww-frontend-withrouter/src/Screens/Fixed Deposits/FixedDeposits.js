@@ -3,8 +3,8 @@ import React from 'react';
 function deposits(){
 
     return(
-        <div>
-            Fixed Deposits Page
+        <div className = "container">
+            <h4>Fixed Deposits Page</h4>
         </div>
     )
 

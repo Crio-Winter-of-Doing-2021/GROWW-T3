@@ -3,8 +3,8 @@ import React from 'react';
 function MutualFunds(){
 
     return(
-        <div>
-            Mutual Funds
+        <div className = "container">
+            <h4>Mutual Funds</h4>
         </div>
     )
 
